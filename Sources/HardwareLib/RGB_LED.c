@@ -8,11 +8,7 @@
 #include "RGB_LED.h"
 #include "S32K144.h"
 
-#define RedLED   15u
-#define GreenLED 16u
-#define BlueLED  0u  // Port PTD0, bit 0: FRDM EVB output to blue LED
-#define SW2 12u 	 // Port PTC12, bit 12: FRDM EVB input from BTN0 [SW2]
-#define SW3 13u 	 // Port PTC12, bit 12: FRDM EVB input from BTN1 [SW3]
+
 
 // RGB_LED初始化
 void RGB_LED_KEY_init(void){
@@ -21,11 +17,14 @@ void RGB_LED_KEY_init(void){
 
 	/* Configure port C12 as GPIO input (BTN 0 [SW2] on EVB) */
 	PTC->PDDR &= ~(1<<SW2);   /* Port C12: Data Direction= input (default) */
-	PORTC->PCR[SW2] = PORT_PCR_MUX(1) |PORT_PCR_PFE_MASK;// 输入过滤器已启用 /* Port C12: MUX = GPIO, input filter enabled */
+	PORTC->PCR[SW2] = PORT_PCR_MUX(1) |PORT_PCR_PFE_MASK  /* Port C12: MUX = GPIO, input filter enabled */
+									  | PORT_PCR_IRQC(0x09); /* 上升沿中断0x09 下降沿中断0x0A */
 	
 	/* Configure port C13 as GPIO input (BTN 1 [SW3] on EVB) */
 	PTC->PDDR &= ~(1<<SW3);   /* Port C12: Data Direction= input (default) */
-	PORTC->PCR[SW3] = PORT_PCR_MUX(1) |PORT_PCR_PFE_MASK;// 输入过滤器已启用 /* Port C12: MUX = GPIO, input filter enabled */
+	PORTC->PCR[SW3] = PORT_PCR_MUX(1) |PORT_PCR_PFE_MASK  /* Port C12: MUX = GPIO, input filter enabled */
+									  | PORT_PCR_IRQC(0x09); /* 上升沿中断0x09 下降沿中断0x0A */
+	S32_NVIC_EnableIRQ(PORTC_IRQn, 0x00); /* 使能中断，并设置优先级 */
 
 	/* Configure port D0 as GPIO output (LED on EVB) */
 	PTD->PDDR |= 1<<BlueLED;       /* Port D0: Data Direction= output */
@@ -40,21 +39,28 @@ void RGB_LED_KEY_init(void){
 	PTD-> PSOR |= 1<<GreenLED;
 	PTD-> PSOR |= 1<<RedLED;
 }
-
-// RED_LED闪烁
-void RED_toggle(void){
-	PTD-> PTOR |= 1<<RedLED; 
+/* 中断配置 */
+void S32_NVIC_EnableIRQ (uint32_t vector_number, uint32_t priority) {
+	uint8_t shift = (uint8_t) (8U - FEATURE_NVIC_PRIO_BITS);
+	/* 清除任何挂起的 IRQ */
+	S32_NVIC->ISER[(uint32_t)(vector_number) >> 5U] = (uint32_t)(1U << ((uint32_t)(vector_number) & (uint32_t)0x1FU));
+	/* 使能 IRQ */
+	S32_NVIC->ICPR[(uint32_t)(vector_number) >> 5U] = (uint32_t)(1U << ((uint32_t)(vector_number) & (uint32_t)0x1FU));
+	/* 优先级设置 */
+	S32_NVIC->IP[(uint32_t)vector_number] = (uint8_t)(((((uint32_t)priority) << shift)) & 0xFFUL);
 }
 
-// GREEN_LED闪烁
-void GREEN_toggle(void){
-	PTD-> PTOR |= 1<<GreenLED; 
+/* LED控制开/关 */
+void LED_Ctrl(uint32_t LED_pin, bool out_bit){
+	if(out_bit) PTD->PCOR |= (1 << LED_pin);   
+    else PTD->PSOR |= (1 << LED_pin); 
 }
 
-// BLUE_LED闪烁
-void BLUE_toggle(void){
-	PTD-> PTOR |= 1<<BlueLED; 
+/* LED闪烁 */
+void LED_Toggle(uint32_t LED_pin){
+	PTD-> PTOR |= 1<<LED_pin; 
 }
+
 
 // SW2 按键扫描
 bool SW2_key(void){
@@ -63,4 +69,10 @@ bool SW2_key(void){
 // SW3 按键扫描
 bool SW3_key(void){
 	return (PTC->PDIR & (1<<SW3));
+}
+
+void PORTC_IRQHandler(void)
+{
+	PORTC->PCR[SW2] |= PORT_PCR_ISF_MASK; //清除外部中断
+	PORTC->PCR[SW3] |= PORT_PCR_ISF_MASK; //清除外部中断
 }

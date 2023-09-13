@@ -1,5 +1,6 @@
-Generated_Code/clockMan1.o: ../Generated_Code/clockMan1.c \
- ../Generated_Code/clockMan1.h ../Generated_Code/Cpu.h \
+Generated_Code/pwrMan1.o: ../Generated_Code/pwrMan1.c \
+ ../Generated_Code/pwrMan1.h ../Generated_Code/clockMan1.h \
+ ../Generated_Code/Cpu.h \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/platform/devices/device_registers.h \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/platform/devices/common/s32_core_cm4.h \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/platform/devices/S32K144/include/S32K144.h \
@@ -22,7 +23,9 @@ Generated_Code/clockMan1.o: ../Generated_Code/clockMan1.c \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/deprecated_definitions.h \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/portmacro.h \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/mpu_wrappers.h \
- ../Generated_Code/Flash1.h ../Generated_Code/pwrMan1.h
+ ../Generated_Code/Flash1.h
+
+../Generated_Code/pwrMan1.h:
 
 ../Generated_Code/clockMan1.h:
 
@@ -73,5 +76,3 @@ D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/por
 D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/mpu_wrappers.h:
 
 ../Generated_Code/Flash1.h:
-
-../Generated_Code/pwrMan1.h:

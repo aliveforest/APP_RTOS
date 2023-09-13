@@ -14,6 +14,14 @@
 #include <stdbool.h>
 #include <string.h>
 #include "S32K144.h"
+#include "device_registers.h"
+/* Kernel includes. */
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+#include "semphr.h"
+#include "timers.h"
+/* User includes. */
 #include "RGB_LED.h"
 #include "latency.h"
 #include "LPUART.h"

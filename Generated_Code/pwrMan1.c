@@ -7,7 +7,7 @@
 **     Version     : Component SDK_S32K1xx_15, Driver 01.00, CPU db: 3.00.000
 **     Repository  : SDK_S32K1xx_15
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2023-09-13, 14:31, # CodeGen: 11
+**     Date/Time   : 2023-09-13, 16:05, # CodeGen: 12
 **
 **     Copyright 1997 - 2015 Freescale Semiconductor, Inc. 
 **     Copyright 2016-2017 NXP 
@@ -52,7 +52,7 @@
  * ************************************************************************* */
 /*! @brief User Configuration structure power_managerCfg_0 */
 power_manager_user_config_t pwrMan1_InitConfig1 = {
-    .powerMode = POWER_MANAGER_RUN,                                  /*!< Power manager mode  */
+    .powerMode = POWER_MANAGER_HSRUN,                                /*!< Power manager mode  */
     .sleepOnExitValue = false,                                       /*!< Sleep on exit value */
 };        
 /* *************************************************************************
@@ -60,7 +60,7 @@ power_manager_user_config_t pwrMan1_InitConfig1 = {
  * ************************************************************************* */
 /*! @brief User Configuration structure power_managerCfg_1 */
 power_manager_user_config_t pwrMan1_InitConfig0 = {
-    .powerMode = POWER_MANAGER_HSRUN,                                /*!< Power manager mode  */
+    .powerMode = POWER_MANAGER_RUN,                                  /*!< Power manager mode  */
     .sleepOnExitValue = false,                                       /*!< Sleep on exit value */
 };        
 /* *************************************************************************

@@ -7,7 +7,7 @@
 **     Version     : Component SDK_S32K1xx_15, Driver 01.00, CPU db: 3.00.000
 **     Repository  : SDK_S32K1xx_15
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2023-09-13, 14:31, # CodeGen: 11
+**     Date/Time   : 2023-09-13, 17:11, # CodeGen: 13
 **
 **     Copyright 1997 - 2015 Freescale Semiconductor, Inc. 
 **     Copyright 2016-2017 NXP 
@@ -132,7 +132,7 @@ clock_manager_user_config_t clockMan1_InitConfig0 = {
         {
             .initialize       = true,                                          /*!< Initialize */
             /* SIRCCSR */
-            .enableInStop     = true,                                          /*!< SIRCSTEN  */
+            .enableInStop     = false,                                         /*!< SIRCSTEN  */
             .enableInLowPower = true,                                          /*!< SIRCLPEN  */
             .locked           = false,                                         /*!< LK        */
             /* SIRCCFG */
@@ -235,8 +235,8 @@ clock_manager_user_config_t clockMan1_InitConfig0 = {
         .lpoClockConfig =              /*!< Low Power Clock configuration.     */
         {
             .initialize       = true,                                          /*!< Initialize    */
-            .enableLpo1k      = true,                                          /*!< LPO1KCLKEN    */
-            .enableLpo32k     = true,                                          /*!< LPO32KCLKEN   */
+            .enableLpo1k      = false,                                         /*!< LPO1KCLKEN    */
+            .enableLpo32k     = false,                                         /*!< LPO32KCLKEN   */
             .sourceLpoClk     = SIM_LPO_CLK_SEL_LPO_128K,                      /*!< LPOCLKSEL     */
             .sourceRtcClk     = SIM_RTCCLK_SEL_SOSCDIV1_CLK,                   /*!< RTCCLKSEL     */
         },
@@ -275,7 +275,7 @@ clock_manager_user_config_t clockMan1_InitConfig0 = {
         .lpoClockConfig =              /*!< Low Power Clock configuration.     */
         {
             .initialize       = true,                                          /*!< Initialize             */
-            .enable           = true,                                          /*!< Enable/disable LPO     */
+            .enable           = false,                                         /*!< Enable/disable LPO     */
             .trimValue        = 0,                                             /*!< Trimming value for LPO */
         },
     },

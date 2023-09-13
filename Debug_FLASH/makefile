@@ -13,6 +13,8 @@ RM := rm -rf
 -include SDK/rtos/FreeRTOS_S32K/Source/portable/MemMang/subdir.mk
 -include SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/subdir.mk
 -include SDK/rtos/FreeRTOS_S32K/Source/subdir.mk
+-include SDK/platform/drivers/src/power/S32K1xx/subdir.mk
+-include SDK/platform/drivers/src/power/subdir.mk
 -include SDK/platform/drivers/src/pins/subdir.mk
 -include SDK/platform/drivers/src/interrupt/subdir.mk
 -include SDK/platform/drivers/src/flash/subdir.mk

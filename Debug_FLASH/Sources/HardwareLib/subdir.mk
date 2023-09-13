@@ -10,6 +10,7 @@ C_SRCS += \
 ../Sources/HardwareLib/LPUART.c \
 ../Sources/HardwareLib/LP_IT_timer.c \
 ../Sources/HardwareLib/OLED_FONT.c \
+../Sources/HardwareLib/PowerSwitch.c \
 ../Sources/HardwareLib/RGB_LED.c \
 ../Sources/HardwareLib/SPI_OLED.c \
 ../Sources/HardwareLib/Ymodem.c \
@@ -22,6 +23,7 @@ OBJS += \
 ./Sources/HardwareLib/LPUART.o \
 ./Sources/HardwareLib/LP_IT_timer.o \
 ./Sources/HardwareLib/OLED_FONT.o \
+./Sources/HardwareLib/PowerSwitch.o \
 ./Sources/HardwareLib/RGB_LED.o \
 ./Sources/HardwareLib/SPI_OLED.o \
 ./Sources/HardwareLib/Ymodem.o \
@@ -34,6 +36,7 @@ C_DEPS += \
 ./Sources/HardwareLib/LPUART.d \
 ./Sources/HardwareLib/LP_IT_timer.d \
 ./Sources/HardwareLib/OLED_FONT.d \
+./Sources/HardwareLib/PowerSwitch.d \
 ./Sources/HardwareLib/RGB_LED.d \
 ./Sources/HardwareLib/SPI_OLED.d \
 ./Sources/HardwareLib/Ymodem.d \

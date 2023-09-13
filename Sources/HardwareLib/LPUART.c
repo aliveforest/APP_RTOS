@@ -13,7 +13,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-
+TickType_t delay_10 = 10ul;
 QueueHandle_t LPUART_RX_que;        /* LPUART数据接收句柄 */
 
 /* Init. summary: 115200 baud, 1 stop bit, 8 bit format, no parity */
@@ -58,7 +58,7 @@ void LPUART1_init(void){
 												/* SBK=0: Normal transmitter operation - no break char */
 												/* LOOPS,RSRC=0: no loop back */
 	while((bool)((LPUART1->CTRL & LPUART_CTRL_RE_MASK) != 0U) != 1u) {}
-//    INT_SYS_SetPriority(LPUART1_RxTx_IRQn, 0x02);
+
 	LPUART1_NVIC_init_IRQs(LPUART1_RxTx_IRQn, 0x03);
 
     LPUART_RX_que = xQueueCreate(200, sizeof(uint8_t)); /* LPUART数据队列创建 */

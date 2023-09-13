@@ -14,6 +14,8 @@
 
 
 extern volatile uint16_t REV_FLAG;
+extern QueueHandle_t LPUART_RX_que;        /* LPUART数据接收句柄 */
+extern TickType_t delay_10;
 
 #ifdef YMODEM  /* 如果使用YMODEM协议 */
 extern uint8_t receivebuff[PACKET_HEAD+PACKET_1024_SIZE+PACKET_TAIL];

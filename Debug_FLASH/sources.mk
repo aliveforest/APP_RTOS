@@ -30,6 +30,8 @@ SDK/platform/drivers/src/clock/S32K1xx \
 SDK/platform/drivers/src/flash \
 SDK/platform/drivers/src/interrupt \
 SDK/platform/drivers/src/pins \
+SDK/platform/drivers/src/power/S32K1xx \
+SDK/platform/drivers/src/power \
 SDK/rtos/FreeRTOS_S32K/Source \
 SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F \
 SDK/rtos/FreeRTOS_S32K/Source/portable/MemMang \
