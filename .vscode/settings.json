@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "hardwarelib.h": "c",
+        "cpu.h": "c",
+        "latency.h": "c",
+        "lpuart.h": "c",
+        "s32k144.h": "c"
+    }
+}
