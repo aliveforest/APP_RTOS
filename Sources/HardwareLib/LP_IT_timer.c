@@ -11,7 +11,7 @@ void LPIT0_init(void) {
                                        /* DOZE_EN=0: Timer chans are stopped in DOZE mode */
                                        /* SW_RST=0: SW reset does not reset timer chans, regs */
                                        /* M_CEN=1: 启用模块 clk（允许写入其他 LPIT0 寄存器） */
-    LPIT0->MIER = LPIT_MIER_TIE0_MASK; /* TIE0=1：为 Chan 0 启用定时器中断*/
+    LPIT0->MIER = LPIT_MIER_TIE0(1); /* TIE0=1：为 Chan 0 启用定时器中断*/
     LPIT0->TMR[0].TVAL = (uint32_t)(2000);     /* Chan 0 Timeout period: 40M clocks 为1s*/
     LPIT0->TMR[0].TCTRL = LPIT_TMR_TCTRL_T_EN(1);       // 开启定时器
                                         /* T_EN=1: 启用定时器通道 */
@@ -29,12 +29,13 @@ void LPIT0_init(void) {
 void LPIT_NVIC_init_IRQs (uint32_t vector_number, uint32_t priority) {
 	uint8_t shift = (uint8_t) (8U - FEATURE_NVIC_PRIO_BITS);
 	/* 清除任何挂起的 IRQ */
-	S32_NVIC->ISER[(uint32_t)(vector_number) >> 5U] = (uint32_t)(1U << ((uint32_t)(vector_number) & (uint32_t)0x1FU));
-	/* 使能 IRQ */
 	S32_NVIC->ICPR[(uint32_t)(vector_number) >> 5U] = (uint32_t)(1U << ((uint32_t)(vector_number) & (uint32_t)0x1FU));
+	/* 使能 IRQ */
+	S32_NVIC->ISER[(uint32_t)(vector_number) >> 5U] = (uint32_t)(1U << ((uint32_t)(vector_number) & (uint32_t)0x1FU));
 	/* 优先级设置 */
 	S32_NVIC->IP[(uint32_t)vector_number] = (uint8_t)(((((uint32_t)priority) << shift)) & 0xFFUL);
 }
+
 
 /* 用于统计运行时间 */
 volatile uint32_t CPU_RunTime = 0UL;

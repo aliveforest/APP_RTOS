@@ -7,7 +7,7 @@
  */
 #include "RGB_LED.h"
 #include "S32K144.h"
-#include "PowerSwitch.h"
+#include "HardwareLib.h"
 
 
 // RGB_LED初始化
@@ -43,13 +43,12 @@ void RGB_LED_KEY_init(void){
 void KEY_NVIC_EnableIRQ (uint32_t vector_number, uint32_t priority) {
 	uint8_t shift = (uint8_t) (8U - FEATURE_NVIC_PRIO_BITS);
 	/* 清除任何挂起的 IRQ */
-	S32_NVIC->ISER[(uint32_t)(vector_number) >> 5U] = (uint32_t)(1U << ((uint32_t)(vector_number) & (uint32_t)0x1FU));
-	/* 使能 IRQ */
 	S32_NVIC->ICPR[(uint32_t)(vector_number) >> 5U] = (uint32_t)(1U << ((uint32_t)(vector_number) & (uint32_t)0x1FU));
+	/* 使能 IRQ */
+	S32_NVIC->ISER[(uint32_t)(vector_number) >> 5U] = (uint32_t)(1U << ((uint32_t)(vector_number) & (uint32_t)0x1FU));
 	/* 优先级设置 */
 	S32_NVIC->IP[(uint32_t)vector_number] = (uint8_t)(((((uint32_t)priority) << shift)) & 0xFFUL);
 }
-
 /* LED控制开/关 */
 void LED_Ctrl(uint32_t LED_pin, bool out_bit){
 	if(out_bit) PTD->PCOR |= (1 << LED_pin);   
@@ -73,7 +72,7 @@ bool SW3_key(void){
 
 void PORTC_IRQHandler(void)
 {
+	// PORTC->ISFR = PORT_ISFR_ISF_MASK; //清除PORTC外部中断
 	PORTC->PCR[SW2] |= PORT_PCR_ISF_MASK; //清除外部中断
 	PORTC->PCR[SW3] |= PORT_PCR_ISF_MASK; //清除外部中断
-	Enable_Peripherals();
 }

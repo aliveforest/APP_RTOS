@@ -32,10 +32,7 @@
 
 
 
-
-
 void Power_Man_Init(void);
-void Close_Peripherals(void);
-void Enable_Peripherals(void);
+
 
 #endif /* POWERSWITCH_H_ */

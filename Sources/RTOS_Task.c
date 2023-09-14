@@ -86,12 +86,12 @@ void key_task(void){
 //    	LPUART1_printf("key_task\r\n");
         if(SW2_key()){
 			LPUART1_printf("KEY2 press!\r\n");
-			LPUART1_printf("DISABLE_INTERRUPTS!\r\n");
-			taskDISABLE_INTERRUPTS();/*关闭中断*/
-			LPUART1_printf("Wait 2s !\r\n");
-			later_ms(2000);
-			taskENABLE_INTERRUPTS();/*开启中断*/
-			LPUART1_printf("ENABLE_INTERRUPTS!\r\n");
+//			LPUART1_printf("DISABLE_INTERRUPTS!\r\n");
+//			taskDISABLE_INTERRUPTS();/*关闭中断*/
+//			LPUART1_printf("Wait 2s !\r\n");
+//			later_ms(2000);
+//			taskENABLE_INTERRUPTS();/*开启中断*/
+//			LPUART1_printf("ENABLE_INTERRUPTS!\r\n");
 		}
 		else if(SW3_key()){ /* update APP */
 			LPUART1_printf("KEY3 press!\r\n");
