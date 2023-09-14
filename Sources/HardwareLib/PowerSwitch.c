@@ -132,6 +132,7 @@ void Read_User_Option(uint8_t * option){
 }
 /* 外设引脚电平控制 */
 void Peripheral_IO_Level_Ctrl(void){
+    
     /*  IO_SPI引脚  */
     SPI_OLED_Clear();
     PTA->PCOR |= ((1<<17)|(1<<11)); // 输出低
