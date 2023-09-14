@@ -7,7 +7,7 @@
  */
 #include "RGB_LED.h"
 #include "S32K144.h"
-
+#include "PowerSwitch.h"
 
 
 // RGB_LED初始化
@@ -18,13 +18,13 @@ void RGB_LED_KEY_init(void){
 	/* Configure port C12 as GPIO input (BTN 0 [SW2] on EVB) */
 	PTC->PDDR &= ~(1<<SW2);   /* Port C12: Data Direction= input (default) */
 	PORTC->PCR[SW2] = PORT_PCR_MUX(1) |PORT_PCR_PFE_MASK  /* Port C12: MUX = GPIO, input filter enabled */
-									  | PORT_PCR_IRQC(0x09); /* 上升沿中断0x09 下降沿中断0x0A */
+									  | PORT_PCR_IRQC(0x0B); /* 上升沿中断0x09 下降沿中断0x0A */
 	
 	/* Configure port C13 as GPIO input (BTN 1 [SW3] on EVB) */
 	PTC->PDDR &= ~(1<<SW3);   /* Port C12: Data Direction= input (default) */
 	PORTC->PCR[SW3] = PORT_PCR_MUX(1) |PORT_PCR_PFE_MASK  /* Port C12: MUX = GPIO, input filter enabled */
-									  | PORT_PCR_IRQC(0x09); /* 上升沿中断0x09 下降沿中断0x0A */
-	S32_NVIC_EnableIRQ(PORTC_IRQn, 0x00); /* 使能中断，并设置优先级 */
+									  | PORT_PCR_IRQC(0x0B); /* 上升沿中断0x09 下降沿中断0x0A */
+	KEY_NVIC_EnableIRQ(PORTC_IRQn, 0x00); /* 使能中断，并设置优先级 */
 
 	/* Configure port D0 as GPIO output (LED on EVB) */
 	PTD->PDDR |= 1<<BlueLED;       /* Port D0: Data Direction= output */
@@ -40,7 +40,7 @@ void RGB_LED_KEY_init(void){
 	PTD-> PSOR |= 1<<RedLED;
 }
 /* 中断配置 */
-void S32_NVIC_EnableIRQ (uint32_t vector_number, uint32_t priority) {
+void KEY_NVIC_EnableIRQ (uint32_t vector_number, uint32_t priority) {
 	uint8_t shift = (uint8_t) (8U - FEATURE_NVIC_PRIO_BITS);
 	/* 清除任何挂起的 IRQ */
 	S32_NVIC->ISER[(uint32_t)(vector_number) >> 5U] = (uint32_t)(1U << ((uint32_t)(vector_number) & (uint32_t)0x1FU));
@@ -75,4 +75,5 @@ void PORTC_IRQHandler(void)
 {
 	PORTC->PCR[SW2] |= PORT_PCR_ISF_MASK; //清除外部中断
 	PORTC->PCR[SW3] |= PORT_PCR_ISF_MASK; //清除外部中断
+	Enable_Peripherals();
 }

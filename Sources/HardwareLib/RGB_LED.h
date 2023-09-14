@@ -8,6 +8,7 @@
 #ifndef RGB_LED_H_
 #define RGB_LED_H_
 #include "S32K144.h"
+#include "device_registers.h"
 #include "stdbool.h"
 
 #define RedLED   15u
@@ -19,6 +20,7 @@
 void RGB_LED_KEY_init(void);
 void LED_Ctrl(uint32_t LED_pin, bool out_bit);
 void LED_Toggle(uint32_t LED_pin);
+void KEY_NVIC_EnableIRQ (uint32_t vector_number, uint32_t priority);
 bool SW2_key(void);
 bool SW3_key(void);
 

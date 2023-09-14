@@ -7,6 +7,8 @@
 #include "PowerSwitch.h"
 
 void Read_User_Option(uint8_t * option);
+
+/* 功耗管理初始化 */
 void Power_Man_Init(void){
     /* Initialize Power Manager
      * -   See PowerSettings component for more info
@@ -32,6 +34,7 @@ void Power_Switch(void) {
         LED_Ctrl(RedLED, 0); /* red led off */
         /* 将电源模式设置为 HSRUN */
         retV = POWER_SYS_SetMode(HSRUN, POWER_MANAGER_POLICY_AGREEMENT);
+        Enable_Peripherals();
         if (retV == STATUS_SUCCESS) {
             LPUART1_printf((const char*)"************************ CPU is in HSRUN.\r\n");
             LPUART1_printf((const char*)"************************ Core frequency: ");
@@ -45,17 +48,17 @@ void Power_Switch(void) {
         LED_Ctrl(RedLED, 0); /* red led off */
         /* 将电源模式设置为RUN */
         retV = POWER_SYS_SetMode(RUN, POWER_MANAGER_POLICY_AGREEMENT);
+        Enable_Peripherals();
         if (retV == STATUS_SUCCESS) {
             LPUART1_printf((const char*)"************************ CPU is in RUN\r\n");
             LPUART1_printf((const char*)"************************ Core frequency: ");
             (void)CLOCK_SYS_GetFreq(CORE_CLOCK, &frequency); /* 获取当前核心时钟频率 */
             LPUART1_printf((const char*)"%ld[Hz] \r\n", frequency); /* 打印 CPU 频率 */
         }else{
-            LPUART1_printf((const char*)"Switch RUN mode unsuccessfully\r\n");
+            LPUART1_printf((const char*)"Switch RUN mode failed!\r\n");
         }
         break;
     case '2': /* VLPR */
-        LED_Ctrl(RedLED, 0); /* red led off */
         /* 将电源模式设置为 VLPR */
         retV = POWER_SYS_SetMode(VLPR, POWER_MANAGER_POLICY_AGREEMENT);
         if (retV == STATUS_SUCCESS) {
@@ -63,40 +66,38 @@ void Power_Switch(void) {
             LPUART1_printf((const char*)"************************ Core frequency: ");
             (void)CLOCK_SYS_GetFreq(CORE_CLOCK, &frequency); /* 获取当前核心时钟频率 */
             LPUART1_printf((const char*)"%ld[Hz] \r\n", frequency); /* 打印 CPU 频率 */
+//            Close_Peripherals();
         }else {
-            LPUART1_printf((const char*)"Switch VLPR mode unsuccessfully\r\n");
+            LPUART1_printf((const char*)"Switch VLPR mode failed!\r\n");
         }
         break;
     case '3': /* STOP1 */
         LPUART1_printf((const char*)"******** CPU is going in STOP1...\r\n");
-//        LED_Ctrl(RedLED, 1); /* red led on */
-//	    LED_Ctrl(GreenLED, 0); /* green led off */
+        Close_Peripherals();
         /* 将电源模式设置为 STOP1 */
         retV = POWER_SYS_SetMode(STOP1, POWER_MANAGER_POLICY_AGREEMENT);
         if (retV == STATUS_SUCCESS) {
             LPUART1_printf((const char*)"CPU was entered STOP1 mode successfully and then woke up to exit STOP1 mode.\r\n");
             LPUART1_printf((const char*)"Current mode is RUN.\r\n");
         }else {
-            LPUART1_printf((const char*)"Switch STOP1 mode unsuccessfully\r\n");
+            LPUART1_printf((const char*)"Switch STOP1 mode failed!\r\n");
         }
         break;
     case '4': /* STOP2 */
         LPUART1_printf((const char*)"******** CPU is going in STOP2...\r\n");
-//        LED_Ctrl(RedLED, 1); /* red led on */
-//	    LED_Ctrl(GreenLED, 0); /* green led off */
+        Close_Peripherals();
         /* 将电源模式设置为 STOP2 */
         retV = POWER_SYS_SetMode(STOP2, POWER_MANAGER_POLICY_AGREEMENT);
         if (retV == STATUS_SUCCESS) {
             LPUART1_printf((const char*)"CPU was entered STOP2 mode successfully and then woke up to exit STOP2 mode.\r\n");
             LPUART1_printf((const char*)"Current mode is RUN.\r\n");
         }else {
-            LPUART1_printf((const char*)"Switch STOP2 mode unsuccessfully\r\n");
+            LPUART1_printf((const char*)"Switch STOP2 mode failed!\r\n");
         }
         break;
     case '5': /* VLPS */
         LPUART1_printf((const char*)"******** CPU is going in VLPS and need interrupt to wake up CPU\r\n");
-//        LED_Ctrl(RedLED, 1); /* red led on */
-//	    LED_Ctrl(GreenLED, 0); /* green led off */
+        Close_Peripherals();
         /* 将电源模式设置为 VLPS */
         retV = POWER_SYS_SetMode(VLPS, POWER_MANAGER_POLICY_AGREEMENT);
         if (retV == STATUS_SUCCESS) {
@@ -107,7 +108,7 @@ void Power_Switch(void) {
                 LPUART1_printf((const char*)"Current mode is VLPR.\r\n");
             }
         }else {
-            LPUART1_printf((const char*)"Switch VLPS mode unsuccessfully\r\n");
+            LPUART1_printf((const char*)"Switch VLPS mode failed!\r\n");
         }
         break;
     default:  /* 这一声明不应达到 */
@@ -127,3 +128,20 @@ void Read_User_Option(uint8_t * option){
         *option = rev;
     }
 }
+/* 关闭外设 */
+void Close_Peripherals(void){
+    PCC-> PCCn[PCC_PORTA_INDEX] &= ~PCC_PCCn_CGC_MASK; /* 关闭 PORTA 时钟 */
+    PCC-> PCCn[PCC_PORTD_INDEX] &= ~PCC_PCCn_CGC_MASK; /* 关闭 PORTD时钟 */
+    PCC->PCCn[PCC_LPIT_INDEX] &= ~PCC_PCCn_CGC_MASK; /* 关闭 LPIT 时钟 */
+    LPUART1->CTRL =	LPUART_CTRL_RIE(0); /* 关闭 LPUART1 中断 */
+    INT_SYS_DisableIRQ(LPUART1_RxTx_IRQn); /* 关闭 LPUART1 中断 */
+    INT_SYS_DisableIRQ(LPIT0_Ch0_IRQn); /* 关闭 LPIT0 中断 */
+} 
+/* 开启外设 */
+void Enable_Peripherals(void){
+    PCC-> PCCn[PCC_PORTA_INDEX] |= PCC_PCCn_CGC_MASK; /* 开启 PORTA 时钟 */
+    PCC-> PCCn[PCC_PORTD_INDEX] |= PCC_PCCn_CGC_MASK; /* 开启 PORTD时钟 */
+    LPUART1_init();
+    LPIT0_init();
+    SPI_OLED_Init();
+} 

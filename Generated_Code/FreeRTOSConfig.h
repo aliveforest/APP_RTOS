@@ -202,6 +202,7 @@
 #define configUSE_DAEMON_TASK_STARTUP_HOOK       0
 
 /* Run time and task stats gathering related definitions. */
+extern volatile uint32_t CPU_RunTime;
 #define configGENERATE_RUN_TIME_STATS            1 
 #define portCONFIGURE_TIMER_FOR_RUN_TIME_STATS() (CPU_RunTime = 0ul) /* nothing */ /* default: use Tick counter as runtime counter */   
                                                  /* extern volatile uint32_t CPU_RunTime;  */
