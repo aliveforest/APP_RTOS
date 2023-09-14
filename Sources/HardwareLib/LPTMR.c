@@ -20,10 +20,10 @@ void LPTMR_init(void)
 //                                |  PCC_PCCn_PCD(0)	/* 外设时钟分频器选择 0~7: 1~8*/
 //                                |  PCC_PCCn_CGC_MASK;   /* 时钟使能  	 	*/
     LPTMR0->CSR = 0x00000000U;                          /* 禁用定时器 */
-    LPTMR0->PSR |= LPTMR_PSR_PCS(0b0)      				/* LPTMR clk src: 8MHz	 */
-    			| LPTMR_PSR_PBYP(0) 					/* Bypass Prescaler 1:预分频器/故障滤波器被旁路 */
-				| LPTMR_PSR_PRESCALE(6); 				/* 6: 128分频 */
-    LPTMR0->CMR = 31250-1;       /* 62500-1: 1 Hz*/     /* CMR 为16位计数器   		*/
+    LPTMR0->PSR |= LPTMR_PSR_PCS(0b1)      				/* LPTMR clk src: LP01KCLC 1KHz	 */
+    			| LPTMR_PSR_PBYP(0); 					/* Bypass Prescaler 1:预分频器/故障滤波器被旁路 */
+//				| LPTMR_PSR_PRESCALE(6); 				/* 6: 128分频 */
+    LPTMR0->CMR = 6000-1;       /* 1000-1: 1 Hz*/     /* CMR 为16位计数器   		*/
      LPTMR0->CSR |= LPTMR_CSR_TIE_MASK; 				/* Timer interrupt enabled 启用定时器中断 */
 
 //    LPTMR0->CSR |= LPTMR_CSR_TFC(1);                  /* 启动 定时器自由运行计数器 */
@@ -70,9 +70,13 @@ void LPTMR0_IRQHandler(void) {
 	{
 		/* Check if TCF flag is set */
 		LPTMR0->CSR |= LPTMR_CSR_TCF_MASK; /*	通过写入逻辑 1 清除 TCF 标志 */
-
-		LPUART1_printf("LPTMR0 Interrupt\r\n");
+//		LPUART1_printf("LPTMR0 Interrupt\r\n");
 //		PTD->PTOR |= 1 << 1| 1<<15;				 /* 切换PTD1 */
+
+		/* SPI_OLED重新上电初始化 */
+		PTA->PSOR |= (1<<17); // 输出高
+		PTA->PCOR |= (1<<11); // 输出低
+		PTD->PSOR |= ((1 << 3)|(1 << 5)|(1 << 12)|(1 << 11)|(1 << 10)); // 输出高电平
 	}
 
 }

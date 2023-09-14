@@ -48,7 +48,7 @@ void init_fcn(void){
 	RGB_LED_KEY_init();                                 /* Initialize LED KEY   */
 	FLASH_DRV_Init(&Flash1_InitConfig0, &flashConfig);  /* Initialize flash     */
 	LPIT0_init();
-//	LPTMR_init();
+	LPTMR_init();
 	SPI_OLED_Init();
     Power_Man_Init();
 }

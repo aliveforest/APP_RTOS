@@ -7,7 +7,7 @@
 **     Version     : Component SDK_S32K1xx_15, Driver 01.00, CPU db: 3.00.000
 **     Repository  : SDK_S32K1xx_15
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2023-09-13, 17:11, # CodeGen: 13
+**     Date/Time   : 2023-09-14, 16:47, # CodeGen: 15
 **
 **     Copyright 1997 - 2015 Freescale Semiconductor, Inc. 
 **     Copyright 2016-2017 NXP 
@@ -275,7 +275,7 @@ clock_manager_user_config_t clockMan1_InitConfig0 = {
         .lpoClockConfig =              /*!< Low Power Clock configuration.     */
         {
             .initialize       = true,                                          /*!< Initialize             */
-            .enable           = false,                                         /*!< Enable/disable LPO     */
+            .enable           = true,                                          /*!< Enable/disable LPO     */
             .trimValue        = 0,                                             /*!< Trimming value for LPO */
         },
     },

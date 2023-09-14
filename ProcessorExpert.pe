@@ -3,7 +3,7 @@
   <Header>
     <Name>APP_RTOS</Name>
     <SavedBy>dengtongbei</SavedBy>
-    <ModificationStamp>13</ModificationStamp>
+    <ModificationStamp>14</ModificationStamp>
     <Date>2023-09-08</Date>
     <IDE>Eclipse IDE</IDE>
     <PEversion>1.12.2.RT7_b1743-0713</PEversion>
@@ -13232,8 +13232,8 @@
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <Value>false</Value>
-        <Expanded>false</Expanded>
+        <Value>true</Value>
+        <Expanded>true</Expanded>
       </ItemState>
       <ItemState>
         <ItemSymbol>LPOReference0</ItemSymbol>
@@ -13926,8 +13926,8 @@
         <UserReadOnly>false</UserReadOnly>
         <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
         <TypeSpecNameState>typeREGSC_LPOEN</TypeSpecNameState>
-        <Index>0</Index>
-        <EnumSymbVal>false</EnumSymbVal>
+        <Index>1</Index>
+        <EnumSymbVal>true</EnumSymbVal>
       </ItemState>
       <ItemState>
         <ItemSymbol>WriteOnceWarningLabel0</ItemSymbol>
@@ -14602,11 +14602,11 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>LPO_128KHz_CLOCK0</ItemSymbol>
-        <Value>0</Value>
+        <Value>128000</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>LPO_CLOCK0</ItemSymbol>
-        <Value>0</Value>
+        <Value>128000</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>RTCCLKSEL_CLOCK0</ItemSymbol>
@@ -14951,7 +14951,7 @@
         <ItemSymbol>ProjectComponentsCountChanged</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
-        <Value>2</Value>
+        <Value>0</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>ModuleName_ADC</ItemSymbol>

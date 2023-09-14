@@ -66,6 +66,7 @@ void Power_Switch(void) {
             LPUART1_printf((const char*)"************************ Core frequency: ");
             (void)CLOCK_SYS_GetFreq(CORE_CLOCK, &frequency); /* 获取当前核心时钟频率 */
             LPUART1_printf((const char*)"%ld[Hz] \r\n", frequency); /* 打印 CPU 频率 */
+            SPI_OLED_PowerOn_Init();
         }else {
             LPUART1_printf((const char*)"Switch VLPR mode failed!\r\n");
         }
@@ -132,7 +133,7 @@ void Read_User_Option(uint8_t * option){
 }
 /* 外设引脚电平控制 */
 void Peripheral_IO_Level_Ctrl(void){
-    
+
     /*  IO_SPI引脚  */
     SPI_OLED_Clear();
     PTA->PCOR |= ((1<<17)|(1<<11)); // 输出低
