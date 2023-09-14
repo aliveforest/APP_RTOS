@@ -14951,7 +14951,7 @@
         <ItemSymbol>ProjectComponentsCountChanged</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
-        <Value>0</Value>
+        <Value>2</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>ModuleName_ADC</ItemSymbol>
@@ -17992,7 +17992,7 @@
         <ReadOnly>false</ReadOnly>
         <ListItemCount>6</ListItemCount>
         <UserReadOnly>false</UserReadOnly>
-        <Expanded>false</Expanded>
+        <Expanded>true</Expanded>
         <ItemsTypeState>Beans\power_manager\Items\S32K144_SDK01\power_manager_power_managerCfg.item</ItemsTypeState>
       </ItemState>
       <ItemState>

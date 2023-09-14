@@ -32,6 +32,7 @@
 // void SPI_OLED_CS_Clr(void);   // CS
 // void SPI_OLED_CS_Set(void);
 
+void SPI_OLED_PowerOn_Init(void);
 void SPI_OLED_Init(void);
 void SPI_OLED_Clear(void);                    // 清屏函数
 void SPI_OLED_Refresh(void);

@@ -75,4 +75,10 @@ void PORTC_IRQHandler(void)
 	// PORTC->ISFR = PORT_ISFR_ISF_MASK; //清除PORTC外部中断
 	PORTC->PCR[SW2] |= PORT_PCR_ISF_MASK; //清除外部中断
 	PORTC->PCR[SW3] |= PORT_PCR_ISF_MASK; //清除外部中断
+	
+	/* SPI_OLED重新上电初始化 */
+	PTA->PSOR |= (1<<17); // 输出高
+	PTA->PCOR |= (1<<11); // 输出低
+	PTD->PSOR |= ((1 << 3)|(1 << 5)|(1 << 12)|(1 << 11)|(1 << 10)); // 输出高电平
+
 }

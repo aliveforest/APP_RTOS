@@ -125,7 +125,7 @@ void show_task(void){
 //                }
 //            }
 //        }
-        vTaskDelay(800);
+        vTaskDelay(300);
     }
 }
 /* CPU 负载率计算 task */

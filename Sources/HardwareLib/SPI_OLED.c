@@ -27,10 +27,9 @@ void SPI_OLED_DC_Set(void) { PTD->PSOR |= (1UL << 5); }
 void SPI_OLED_CS_Clr(void) { PTD->PCOR |= (1UL << 3);  /*PD3*/}
 void SPI_OLED_CS_Set(void) { PTD->PSOR |= (1UL << 3); }
 
-
-//OLED的初始化
-void SPI_OLED_Init(void){
-    PCC-> PCCn[PCC_PORTD_INDEX] |= PCC_PCCn_CGC_MASK; // 开启时钟模块
+//SPI_IO的初始化
+void SPI_IO_Init(void){
+	PCC-> PCCn[PCC_PORTD_INDEX] |= PCC_PCCn_CGC_MASK; // 开启时钟模块
     PORTD->PCR[3] = PORT_PCR_MUX(1) | PORT_PCR_DSE_MASK;   // 配置引脚为GPIO，并设置驱动能力 1->强驱动, 0->普通驱动
     PORTD->PCR[5] = PORT_PCR_MUX(1) | PORT_PCR_DSE_MASK;   // 配置引脚为GPIO，并设置驱动能力
     PORTD->PCR[12] = PORT_PCR_MUX(1) | PORT_PCR_DSE_MASK;   // 配置引脚为GPIO，并设置驱动能力
@@ -46,6 +45,9 @@ void SPI_OLED_Init(void){
 	PTA->PSOR |= (1<<17); // 输出高
 	PTA->PCOR |= (1<<11); // 输出低
 
+}
+//OLED的上电初始化
+void SPI_OLED_PowerOn_Init(void){
     SPI_OLED_RST_Set();
     later_ms(100);
     SPI_OLED_RST_Clr();
@@ -83,7 +85,15 @@ void SPI_OLED_Init(void){
 	
 	SPI_OLED_Write_Byte(0xAF,OLED_CMD); /*display ON*/ 
 	SPI_OLED_Clear();
-	SPI_OLED_Set_Pos(0,0); 	
+	SPI_OLED_Set_Pos(0,0); 
+}
+
+//OLED的初始化
+void SPI_OLED_Init(void){
+
+	SPI_IO_Init();
+	SPI_OLED_PowerOn_Init();
+	
 }
 
 
