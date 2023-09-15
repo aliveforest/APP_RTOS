@@ -23,11 +23,11 @@ void LPTMR_init(void)
     LPTMR0->PSR |= LPTMR_PSR_PCS(0b1)      				/* LPTMR clk src: LP01KCLC 1KHz	 */
     			| LPTMR_PSR_PBYP(0); 					/* Bypass Prescaler 1:预分频器/故障滤波器被旁路 */
 //				| LPTMR_PSR_PRESCALE(6); 				/* 6: 128分频 */
-    LPTMR0->CMR = 6000-1;       /* 1000-1: 1 Hz*/     /* CMR 为16位计数器   		*/
-     LPTMR0->CSR |= LPTMR_CSR_TIE_MASK; 				/* Timer interrupt enabled 启用定时器中断 */
+    LPTMR0->CMR = 10000-1;       /* 1000-1: 1 Hz*/     /* CMR 为16位计数器   		*/
+    LPTMR0->CSR |= LPTMR_CSR_TIE_MASK; 				/* Timer interrupt enabled 启用定时器中断 */
 
 //    LPTMR0->CSR |= LPTMR_CSR_TFC(1);                  /* 启动 定时器自由运行计数器 */
-    LPTMR0->CSR |= LPTMR_CSR_TEN(1);                    /* Enable Timer 启动定时器			*/
+   LPTMR0->CSR |= LPTMR_CSR_TEN(1);                    /* Enable Timer 启动定时器			*/
 
 
 ///* 1KHz*/

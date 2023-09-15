@@ -9,6 +9,7 @@
 
 void Read_User_Option(uint8_t * option);
 void Peripheral_IO_Level_Ctrl(void);
+void Print_Current_Mode(void);
 
 /* 功耗管理初始化 */
 void Power_Man_Init(void){
@@ -27,6 +28,7 @@ status_t retV = STATUS_SUCCESS; /* 用于显示模式变化状态的变量 */
 void Power_Switch(void) {
 
     LPUART1_printf((const char *)MENU_MESSAGE ADD_MESSAGE); /* 打印菜单 */
+
     // if(option<6) ++option;
     // else option=0;
     Read_User_Option(&option);
@@ -90,7 +92,7 @@ void Power_Switch(void) {
         /* 将电源模式设置为 STOP2 */
         retV = POWER_SYS_SetMode(STOP2, POWER_MANAGER_POLICY_AGREEMENT);
         if (retV == STATUS_SUCCESS) {
-            LPUART1_printf((const char*)"CPU was entered STOP2 mode successfully and then woke up to exit STOP2 mode.\r\n");
+            LPUART1_plrintf((const char*)"CPU was entered STOP2 mode successfully and then woke up to exit STOP2 mode.\r\n");
             LPUART1_printf((const char*)"Current mode is RUN.\r\n");
         	SPI_OLED_PowerOn_Init();
         }else {
@@ -117,6 +119,7 @@ void Power_Switch(void) {
     default:  /* 这一声明不应达到 */
         break;
     }
+    // Print_Current_Mode();
     LPUART1_printf((const char *)SEPARATOR); /* 打印分隔符 */
 }
 
@@ -131,6 +134,18 @@ void Read_User_Option(uint8_t * option){
         *option = rev;
     }
 }
+/* 显示当前运行模式 */
+void Print_Current_Mode(void) {
+    if (POWER_SYS_GetCurrentMode() == POWER_MANAGER_HSRUN) {
+		LPUART1_printf((const char*)"Current mode is HSRUN.\r\n");
+	}else if (POWER_SYS_GetCurrentMode() == POWER_MANAGER_RUN) {
+		LPUART1_printf((const char*)"Current mode is RUN.\r\n");
+	}else if (POWER_SYS_GetCurrentMode() == POWER_MANAGER_VLPR) {
+		LPUART1_printf((const char*)"Current mode is VLPR.\r\n");
+	}
+}
+
+
 /* 外设引脚电平控制 */
 void Peripheral_IO_Level_Ctrl(void){
 
