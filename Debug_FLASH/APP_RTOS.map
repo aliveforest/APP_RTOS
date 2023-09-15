@@ -128,14 +128,34 @@ Discarded input sections
  .text          0x00000000        0x0 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
  .data          0x00000000        0x0 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
  .bss           0x00000000        0x0 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
+ .text.CLOCK_SYS_GetSystemClockFreq
+                0x00000000       0x78 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
+ .text.CLOCK_SYS_GetScgClkOutFreq
+                0x00000000       0x44 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
+ .text.CLOCK_SYS_GetSysAsyncFreq
+                0x00000000       0xd4 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
+ .text.CLOCK_SYS_GetSimRtcClkFreq
+                0x00000000       0x50 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
+ .text.CLOCK_SYS_GetPeripheralClock
+                0x00000000       0x78 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
+ .text.CLOCK_SYS_GetLpoFreq
+                0x00000000       0x4c ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
+ .text.CLOCK_SYS_GetSimClkOutFreq
+                0x00000000       0x98 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
  .text.CLOCK_SYS_TransitionToTmpSysClk
                 0x00000000       0xee ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
  .text.CLOCK_SYS_GetCurrentSysClkConfig
                 0x00000000       0x5c ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
  .text.CLOCK_SYS_ConvertAsyncDividerValue
                 0x00000000       0x6a ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
+ .text.CLOCK_DRV_GetFreq
+                0x00000000      0x3b0 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
  .text.CLOCK_DRV_SetModuleClock
                 0x00000000      0x168 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
+ .text.CLOCK_DRV_SetSystemClock
+                0x00000000      0x104 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
+ .text.CLOCK_DRV_GetSystemClockSource
+                0x00000000       0x5c ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
  .text.CLOCK_DRV_SetClockSource
                 0x00000000      0x2b0 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
  .text.CLOCK_SYS_Init
@@ -146,12 +166,18 @@ Discarded input sections
                 0x00000000        0xc ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
  .text.CLOCK_SYS_GetErrorCallback
                 0x00000000       0x1c ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
+ .text.CLOCK_SYS_GetFreq
+                0x00000000        0x8 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
  .text.CLOCK_SYS_SetConfiguration
                 0x00000000        0x8 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
  .bss.g_clockState
                 0x00000000       0x10 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
+ .rodata.peripheralFeaturesList
+                0x00000000       0x4f ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
  .rodata.sysClkDivMappings.7666
                 0x00000000       0x10 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
+ .rodata.sysClkDivMappings.7744
+                0x00000000       0x11 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
  .text          0x00000000        0x0 ./SDK/platform/drivers/src/flash/flash_driver.o
  .data          0x00000000        0x0 ./SDK/platform/drivers/src/flash/flash_driver.o
  .bss           0x00000000        0x0 ./SDK/platform/drivers/src/flash/flash_driver.o
@@ -354,16 +380,36 @@ Discarded input sections
  .text          0x00000000        0x0 ./SDK/platform/drivers/src/power/S32K1xx/power_manager_S32K1xx.o
  .data          0x00000000        0x0 ./SDK/platform/drivers/src/power/S32K1xx/power_manager_S32K1xx.o
  .bss           0x00000000        0x0 ./SDK/platform/drivers/src/power/S32K1xx/power_manager_S32K1xx.o
+ .text.POWER_DRV_EnableVlpClockSrc
+                0x00000000       0x5c ./SDK/platform/drivers/src/power/S32K1xx/power_manager_S32K1xx.o
+ .text.POWER_DRV_DisableVlpClockSrc
+                0x00000000       0x2c ./SDK/platform/drivers/src/power/S32K1xx/power_manager_S32K1xx.o
+ .text.POWER_DRV_SwitchVlprClk
+                0x00000000       0x32 ./SDK/platform/drivers/src/power/S32K1xx/power_manager_S32K1xx.o
  .text.POWER_SYS_DoDeinit
                 0x00000000       0x14 ./SDK/platform/drivers/src/power/S32K1xx/power_manager_S32K1xx.o
+ .text.POWER_SYS_GetCurrentMode
+                0x00000000       0x24 ./SDK/platform/drivers/src/power/S32K1xx/power_manager_S32K1xx.o
+ .text.POWER_SYS_DoSetMode
+                0x00000000      0x310 ./SDK/platform/drivers/src/power/S32K1xx/power_manager_S32K1xx.o
  .text.POWER_SYS_GetResetSrcStatusCmd
                 0x00000000       0x60 ./SDK/platform/drivers/src/power/S32K1xx/power_manager_S32K1xx.o
+ .bss.changeClkVlp
+                0x00000000        0x1 ./SDK/platform/drivers/src/power/S32K1xx/power_manager_S32K1xx.o
+ .bss.sysClkConfig
+                0x00000000        0x8 ./SDK/platform/drivers/src/power/S32K1xx/power_manager_S32K1xx.o
  .text          0x00000000        0x0 ./SDK/platform/drivers/src/power/S32K1xx/power_smc_hw_access.o
  .data          0x00000000        0x0 ./SDK/platform/drivers/src/power/S32K1xx/power_smc_hw_access.o
  .bss           0x00000000        0x0 ./SDK/platform/drivers/src/power/S32K1xx/power_smc_hw_access.o
+ .text.SMC_WaitForStatChange
+                0x00000000       0x70 ./SDK/platform/drivers/src/power/S32K1xx/power_smc_hw_access.o
+ .text.SMC_SetPowerMode
+                0x00000000       0xfc ./SDK/platform/drivers/src/power/S32K1xx/power_smc_hw_access.o
  .text          0x00000000        0x0 ./SDK/platform/drivers/src/power/power_manager.o
  .data          0x00000000        0x0 ./SDK/platform/drivers/src/power/power_manager.o
  .bss           0x00000000        0x0 ./SDK/platform/drivers/src/power/power_manager.o
+ .text.POWER_SYS_CallbacksManagement
+                0x00000000       0xa4 ./SDK/platform/drivers/src/power/power_manager.o
  .text.POWER_SYS_Deinit
                 0x00000000       0x18 ./SDK/platform/drivers/src/power/power_manager.o
  .text.POWER_SYS_GetLastMode
@@ -374,6 +420,8 @@ Discarded input sections
                 0x00000000        0xc ./SDK/platform/drivers/src/power/power_manager.o
  .text.POWER_SYS_GetErrorCallback
                 0x00000000       0x1c ./SDK/platform/drivers/src/power/power_manager.o
+ .text.POWER_SYS_SetMode
+                0x00000000       0x80 ./SDK/platform/drivers/src/power/power_manager.o
  .text.POWER_SYS_GetDefaultConfig
                 0x00000000        0xa ./SDK/platform/drivers/src/power/power_manager.o
  .text          0x00000000        0x0 ./SDK/rtos/FreeRTOS_S32K/Source/croutine.o
@@ -439,16 +487,10 @@ Discarded input sections
                 0x00000000       0x1a ./SDK/rtos/FreeRTOS_S32K/Source/queue.o
  .text.xQueueGetMutexHolderFromISR
                 0x00000000       0x20 ./SDK/rtos/FreeRTOS_S32K/Source/queue.o
- .text.xQueueCreateCountingSemaphore
-                0x00000000       0x40 ./SDK/rtos/FreeRTOS_S32K/Source/queue.o
  .text.xQueueCreateMutex
                 0x00000000       0x24 ./SDK/rtos/FreeRTOS_S32K/Source/queue.o
  .text.xQueueGiveMutexRecursive
                 0x00000000       0x40 ./SDK/rtos/FreeRTOS_S32K/Source/queue.o
- .text.xQueueGiveFromISR
-                0x00000000       0xb2 ./SDK/rtos/FreeRTOS_S32K/Source/queue.o
- .text.xQueueSemaphoreTake
-                0x00000000      0x1a8 ./SDK/rtos/FreeRTOS_S32K/Source/queue.o
  .text.xQueueTakeMutexRecursive
                 0x00000000       0x44 ./SDK/rtos/FreeRTOS_S32K/Source/queue.o
  .text.xQueuePeek
@@ -593,18 +635,12 @@ Discarded input sections
                 0x00000000       0x2c ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
  .text.xTaskGetCurrentTaskHandle
                 0x00000000        0xc ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
- .text.xTaskPriorityInherit
-                0x00000000       0xb8 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
- .text.vTaskPriorityDisinheritAfterTimeout
-                0x00000000       0xc0 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
  .text.vTaskList
                 0x00000000       0xf4 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
  .text.vTaskGetRunTimeStats
                 0x00000000       0xd8 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
  .text.uxTaskResetEventItemValue
                 0x00000000       0x18 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
- .text.pvTaskIncrementMutexHeldCount
-                0x00000000       0x1c ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
  .text.ulTaskNotifyTake
                 0x00000000       0x78 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
  .text.xTaskNotifyWait
@@ -725,8 +761,21 @@ Discarded input sections
  .text          0x00000000        0x0 ./Sources/HardwareLib/PowerSwitch.o
  .data          0x00000000        0x0 ./Sources/HardwareLib/PowerSwitch.o
  .bss           0x00000000        0x0 ./Sources/HardwareLib/PowerSwitch.o
+ .text.Read_User_Option
+                0x00000000       0x50 ./Sources/HardwareLib/PowerSwitch.o
  .text.Print_Current_Mode
                 0x00000000       0x40 ./Sources/HardwareLib/PowerSwitch.o
+ .text.Peripheral_IO_Level_Ctrl
+                0x00000000       0x24 ./Sources/HardwareLib/PowerSwitch.o
+ .text.Power_Switch
+                0x00000000      0x1bc ./Sources/HardwareLib/PowerSwitch.o
+ .bss.option    0x00000000        0x1 ./Sources/HardwareLib/PowerSwitch.o
+ .rodata.Power_Switch.str1.4
+                0x00000000      0x3f7 ./Sources/HardwareLib/PowerSwitch.o
+ .rodata.Print_Current_Mode.str1.4
+                0x00000000       0x4c ./Sources/HardwareLib/PowerSwitch.o
+ .rodata.Read_User_Option.str1.4
+                0x00000000       0x12 ./Sources/HardwareLib/PowerSwitch.o
  .text          0x00000000        0x0 ./Sources/HardwareLib/RGB_LED.o
  .data          0x00000000        0x0 ./Sources/HardwareLib/RGB_LED.o
  .bss           0x00000000        0x0 ./Sources/HardwareLib/RGB_LED.o
@@ -752,12 +801,12 @@ Discarded input sections
  .text          0x00000000        0x0 ./Sources/HardwareLib/Ymodem.o
  .data          0x00000000        0x0 ./Sources/HardwareLib/Ymodem.o
  .bss           0x00000000        0x0 ./Sources/HardwareLib/Ymodem.o
- .debug_info    0x00000000     0x1d3f ./Sources/HardwareLib/Ymodem.o
+ .debug_info    0x00000000     0x1d24 ./Sources/HardwareLib/Ymodem.o
  .debug_abbrev  0x00000000      0x1a9 ./Sources/HardwareLib/Ymodem.o
  .debug_aranges
                 0x00000000       0x18 ./Sources/HardwareLib/Ymodem.o
  .debug_line    0x00000000      0x57f ./Sources/HardwareLib/Ymodem.o
- .debug_str     0x00000000     0x27bc ./Sources/HardwareLib/Ymodem.o
+ .debug_str     0x00000000     0x27ac ./Sources/HardwareLib/Ymodem.o
  .comment       0x00000000       0xa1 ./Sources/HardwareLib/Ymodem.o
  .ARM.attributes
                 0x00000000       0x39 ./Sources/HardwareLib/Ymodem.o
@@ -982,7 +1031,7 @@ LOAD e:/nxp/s32ds_arm_v2.2/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../
  .FlashConfig   0x00009400       0x10 ./Project_Settings/Startup_Code/startup_S32K144.o
                 0x00009410                . = ALIGN (0x4)
 
-.text           0x00009410     0x6eb8
+.text           0x00009410     0x5e08
                 0x00009410                . = ALIGN (0x4)
  *(.text)
  .text          0x00009410       0x4c ./Project_Settings/Startup_Code/startup_S32K144.o
@@ -1147,520 +1196,467 @@ LOAD e:/nxp/s32ds_arm_v2.2/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../
                 0x00009a9c      0x1e4 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
  .text.CLOCK_SYS_TransitionSystemClock
                 0x00009c80       0x3c ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
- .text.CLOCK_SYS_GetSystemClockFreq
-                0x00009cbc       0x78 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
- .text.CLOCK_SYS_GetScgClkOutFreq
-                0x00009d34       0x44 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
- .text.CLOCK_SYS_GetSysAsyncFreq
-                0x00009d78       0xd4 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
- .text.CLOCK_SYS_GetSimRtcClkFreq
-                0x00009e4c       0x50 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
- .text.CLOCK_SYS_GetPeripheralClock
-                0x00009e9c       0x78 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
- .text.CLOCK_SYS_GetLpoFreq
-                0x00009f14       0x4c ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
- .text.CLOCK_SYS_GetSimClkOutFreq
-                0x00009f60       0x98 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
  .text.CLOCK_DRV_Init
-                0x00009ff8      0x598 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
-                0x00009ff8                CLOCK_DRV_Init
- .text.CLOCK_DRV_GetFreq
-                0x0000a590      0x3b0 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
-                0x0000a590                CLOCK_DRV_GetFreq
- .text.CLOCK_DRV_SetSystemClock
-                0x0000a940      0x104 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
-                0x0000a940                CLOCK_DRV_SetSystemClock
- .text.CLOCK_DRV_GetSystemClockSource
-                0x0000aa44       0x5c ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
-                0x0000aa44                CLOCK_DRV_GetSystemClockSource
- .text.CLOCK_SYS_GetFreq
-                0x0000aaa0        0x8 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
-                0x0000aaa0                CLOCK_SYS_GetFreq
+                0x00009cbc      0x598 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
+                0x00009cbc                CLOCK_DRV_Init
  .text.FLASH_DRV_Init
-                0x0000aaa8       0xcc ./SDK/platform/drivers/src/flash/flash_driver.o
-                0x0000aaa8                FLASH_DRV_Init
- .text.POWER_DRV_EnableVlpClockSrc
-                0x0000ab74       0x5c ./SDK/platform/drivers/src/power/S32K1xx/power_manager_S32K1xx.o
- .text.POWER_DRV_DisableVlpClockSrc
-                0x0000abd0       0x2c ./SDK/platform/drivers/src/power/S32K1xx/power_manager_S32K1xx.o
- .text.POWER_DRV_SwitchVlprClk
-                0x0000abfc       0x32 ./SDK/platform/drivers/src/power/S32K1xx/power_manager_S32K1xx.o
- *fill*         0x0000ac2e        0x2 
+                0x0000a254       0xcc ./SDK/platform/drivers/src/flash/flash_driver.o
+                0x0000a254                FLASH_DRV_Init
  .text.POWER_SYS_DoInit
-                0x0000ac30       0xa4 ./SDK/platform/drivers/src/power/S32K1xx/power_manager_S32K1xx.o
-                0x0000ac30                POWER_SYS_DoInit
- .text.POWER_SYS_GetCurrentMode
-                0x0000acd4       0x24 ./SDK/platform/drivers/src/power/S32K1xx/power_manager_S32K1xx.o
-                0x0000acd4                POWER_SYS_GetCurrentMode
- .text.POWER_SYS_DoSetMode
-                0x0000acf8      0x310 ./SDK/platform/drivers/src/power/S32K1xx/power_manager_S32K1xx.o
-                0x0000acf8                POWER_SYS_DoSetMode
- .text.SMC_WaitForStatChange
-                0x0000b008       0x70 ./SDK/platform/drivers/src/power/S32K1xx/power_smc_hw_access.o
- .text.SMC_SetPowerMode
-                0x0000b078       0xfc ./SDK/platform/drivers/src/power/S32K1xx/power_smc_hw_access.o
-                0x0000b078                SMC_SetPowerMode
+                0x0000a320       0xa4 ./SDK/platform/drivers/src/power/S32K1xx/power_manager_S32K1xx.o
+                0x0000a320                POWER_SYS_DoInit
  .text.SMC_SetProtectionMode
-                0x0000b174       0x16 ./SDK/platform/drivers/src/power/S32K1xx/power_smc_hw_access.o
-                0x0000b174                SMC_SetProtectionMode
- *fill*         0x0000b18a        0x2 
- .text.POWER_SYS_CallbacksManagement
-                0x0000b18c       0xa4 ./SDK/platform/drivers/src/power/power_manager.o
+                0x0000a3c4       0x16 ./SDK/platform/drivers/src/power/S32K1xx/power_smc_hw_access.o
+                0x0000a3c4                SMC_SetProtectionMode
+ *fill*         0x0000a3da        0x2 
  .text.POWER_SYS_Init
-                0x0000b230       0x2c ./SDK/platform/drivers/src/power/power_manager.o
-                0x0000b230                POWER_SYS_Init
- .text.POWER_SYS_SetMode
-                0x0000b25c       0x80 ./SDK/platform/drivers/src/power/power_manager.o
-                0x0000b25c                POWER_SYS_SetMode
+                0x0000a3dc       0x2c ./SDK/platform/drivers/src/power/power_manager.o
+                0x0000a3dc                POWER_SYS_Init
  .text.vListInitialise
-                0x0000b2dc       0x16 ./SDK/rtos/FreeRTOS_S32K/Source/list.o
-                0x0000b2dc                vListInitialise
+                0x0000a408       0x16 ./SDK/rtos/FreeRTOS_S32K/Source/list.o
+                0x0000a408                vListInitialise
  .text.vListInitialiseItem
-                0x0000b2f2        0x6 ./SDK/rtos/FreeRTOS_S32K/Source/list.o
-                0x0000b2f2                vListInitialiseItem
+                0x0000a41e        0x6 ./SDK/rtos/FreeRTOS_S32K/Source/list.o
+                0x0000a41e                vListInitialiseItem
  .text.vListInsertEnd
-                0x0000b2f8       0x18 ./SDK/rtos/FreeRTOS_S32K/Source/list.o
-                0x0000b2f8                vListInsertEnd
+                0x0000a424       0x18 ./SDK/rtos/FreeRTOS_S32K/Source/list.o
+                0x0000a424                vListInsertEnd
  .text.vListInsert
-                0x0000b310       0x34 ./SDK/rtos/FreeRTOS_S32K/Source/list.o
-                0x0000b310                vListInsert
+                0x0000a43c       0x34 ./SDK/rtos/FreeRTOS_S32K/Source/list.o
+                0x0000a43c                vListInsert
  .text.uxListRemove
-                0x0000b344       0x26 ./SDK/rtos/FreeRTOS_S32K/Source/list.o
-                0x0000b344                uxListRemove
+                0x0000a470       0x26 ./SDK/rtos/FreeRTOS_S32K/Source/list.o
+                0x0000a470                uxListRemove
  .text.prvIsQueueEmpty
-                0x0000b36a       0x16 ./SDK/rtos/FreeRTOS_S32K/Source/queue.o
+                0x0000a496       0x16 ./SDK/rtos/FreeRTOS_S32K/Source/queue.o
  .text.prvCopyDataToQueue
-                0x0000b380       0x76 ./SDK/rtos/FreeRTOS_S32K/Source/queue.o
+                0x0000a4ac       0x76 ./SDK/rtos/FreeRTOS_S32K/Source/queue.o
  .text.prvCopyDataFromQueue
-                0x0000b3f6       0x24 ./SDK/rtos/FreeRTOS_S32K/Source/queue.o
+                0x0000a522       0x24 ./SDK/rtos/FreeRTOS_S32K/Source/queue.o
  .text.prvUnlockQueue
-                0x0000b41a       0x82 ./SDK/rtos/FreeRTOS_S32K/Source/queue.o
+                0x0000a546       0x82 ./SDK/rtos/FreeRTOS_S32K/Source/queue.o
  .text.xQueueGenericReset
-                0x0000b49c       0x80 ./SDK/rtos/FreeRTOS_S32K/Source/queue.o
-                0x0000b49c                xQueueGenericReset
+                0x0000a5c8       0x80 ./SDK/rtos/FreeRTOS_S32K/Source/queue.o
+                0x0000a5c8                xQueueGenericReset
  .text.xQueueGenericCreate
-                0x0000b51c       0x4a ./SDK/rtos/FreeRTOS_S32K/Source/queue.o
-                0x0000b51c                xQueueGenericCreate
- *fill*         0x0000b566        0x2 
+                0x0000a648       0x4a ./SDK/rtos/FreeRTOS_S32K/Source/queue.o
+                0x0000a648                xQueueGenericCreate
+ .text.xQueueCreateCountingSemaphore
+                0x0000a692       0x40 ./SDK/rtos/FreeRTOS_S32K/Source/queue.o
+                0x0000a692                xQueueCreateCountingSemaphore
+ *fill*         0x0000a6d2        0x2 
  .text.xQueueGenericSend
-                0x0000b568      0x188 ./SDK/rtos/FreeRTOS_S32K/Source/queue.o
-                0x0000b568                xQueueGenericSend
+                0x0000a6d4      0x188 ./SDK/rtos/FreeRTOS_S32K/Source/queue.o
+                0x0000a6d4                xQueueGenericSend
  .text.xQueueGenericSendFromISR
-                0x0000b6f0       0xd6 ./SDK/rtos/FreeRTOS_S32K/Source/queue.o
-                0x0000b6f0                xQueueGenericSendFromISR
- *fill*         0x0000b7c6        0x2 
+                0x0000a85c       0xd6 ./SDK/rtos/FreeRTOS_S32K/Source/queue.o
+                0x0000a85c                xQueueGenericSendFromISR
+ .text.xQueueGiveFromISR
+                0x0000a932       0xb2 ./SDK/rtos/FreeRTOS_S32K/Source/queue.o
+                0x0000a932                xQueueGiveFromISR
  .text.xQueueReceive
-                0x0000b7c8      0x158 ./SDK/rtos/FreeRTOS_S32K/Source/queue.o
-                0x0000b7c8                xQueueReceive
+                0x0000a9e4      0x158 ./SDK/rtos/FreeRTOS_S32K/Source/queue.o
+                0x0000a9e4                xQueueReceive
+ .text.xQueueSemaphoreTake
+                0x0000ab3c      0x1a8 ./SDK/rtos/FreeRTOS_S32K/Source/queue.o
+                0x0000ab3c                xQueueSemaphoreTake
  .text.vQueueWaitForMessageRestricted
-                0x0000b920       0x4e ./SDK/rtos/FreeRTOS_S32K/Source/queue.o
-                0x0000b920                vQueueWaitForMessageRestricted
- *fill*         0x0000b96e        0x2 
+                0x0000ace4       0x4e ./SDK/rtos/FreeRTOS_S32K/Source/queue.o
+                0x0000ace4                vQueueWaitForMessageRestricted
+ *fill*         0x0000ad32        0x2 
  .text.prvResetNextTaskUnblockTime
-                0x0000b970       0x2c ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x0000ad34       0x2c ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
  .text.prvIdleTask
-                0x0000b99c       0x70 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x0000ad60       0x70 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
  .text.prvAddCurrentTaskToDelayedList
-                0x0000ba0c       0xa0 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x0000add0       0xa0 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
  .text.xTaskCreate
-                0x0000baac      0x1d0 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
-                0x0000baac                xTaskCreate
+                0x0000ae70      0x1d0 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x0000ae70                xTaskCreate
  .text.vTaskDelete
-                0x0000bc7c       0xe4 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
-                0x0000bc7c                vTaskDelete
+                0x0000b040       0xe4 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x0000b040                vTaskDelete
  .text.vTaskStartScheduler
-                0x0000bd60       0x8c ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
-                0x0000bd60                vTaskStartScheduler
+                0x0000b124       0x8c ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x0000b124                vTaskStartScheduler
  .text.vTaskSuspendAll
-                0x0000bdec       0x10 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
-                0x0000bdec                vTaskSuspendAll
+                0x0000b1b0       0x10 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x0000b1b0                vTaskSuspendAll
  .text.xTaskGetTickCount
-                0x0000bdfc        0xc ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
-                0x0000bdfc                xTaskGetTickCount
+                0x0000b1c0        0xc ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x0000b1c0                xTaskGetTickCount
  .text.xTaskIncrementTick
-                0x0000be08      0x128 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
-                0x0000be08                xTaskIncrementTick
+                0x0000b1cc      0x128 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x0000b1cc                xTaskIncrementTick
  .text.xTaskResumeAll
-                0x0000bf30      0x100 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
-                0x0000bf30                xTaskResumeAll
+                0x0000b2f4      0x100 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x0000b2f4                xTaskResumeAll
  .text.vTaskDelay
-                0x0000c030       0x4c ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
-                0x0000c030                vTaskDelay
+                0x0000b3f4       0x4c ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x0000b3f4                vTaskDelay
  .text.vTaskSwitchContext
-                0x0000c07c       0xb8 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
-                0x0000c07c                vTaskSwitchContext
+                0x0000b440       0xb8 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x0000b440                vTaskSwitchContext
  .text.vTaskPlaceOnEventList
-                0x0000c134       0x30 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
-                0x0000c134                vTaskPlaceOnEventList
+                0x0000b4f8       0x30 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x0000b4f8                vTaskPlaceOnEventList
  .text.vTaskPlaceOnEventListRestricted
-                0x0000c164       0x3c ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
-                0x0000c164                vTaskPlaceOnEventListRestricted
+                0x0000b528       0x3c ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x0000b528                vTaskPlaceOnEventListRestricted
  .text.xTaskRemoveFromEventList
-                0x0000c1a0       0x88 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
-                0x0000c1a0                xTaskRemoveFromEventList
+                0x0000b564       0x88 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x0000b564                xTaskRemoveFromEventList
  .text.vTaskInternalSetTimeOutState
-                0x0000c228       0x18 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
-                0x0000c228                vTaskInternalSetTimeOutState
+                0x0000b5ec       0x18 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x0000b5ec                vTaskInternalSetTimeOutState
  .text.xTaskCheckForTimeOut
-                0x0000c240       0x9c ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
-                0x0000c240                xTaskCheckForTimeOut
+                0x0000b604       0x9c ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x0000b604                xTaskCheckForTimeOut
  .text.vTaskMissedYield
-                0x0000c2dc        0xc ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
-                0x0000c2dc                vTaskMissedYield
+                0x0000b6a0        0xc ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x0000b6a0                vTaskMissedYield
  .text.xTaskGetSchedulerState
-                0x0000c2e8       0x20 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
-                0x0000c2e8                xTaskGetSchedulerState
+                0x0000b6ac       0x20 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x0000b6ac                xTaskGetSchedulerState
+ .text.xTaskPriorityInherit
+                0x0000b6cc       0xb8 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x0000b6cc                xTaskPriorityInherit
  .text.xTaskPriorityDisinherit
-                0x0000c308       0xb0 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
-                0x0000c308                xTaskPriorityDisinherit
+                0x0000b784       0xb0 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x0000b784                xTaskPriorityDisinherit
+ .text.vTaskPriorityDisinheritAfterTimeout
+                0x0000b834       0xc0 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x0000b834                vTaskPriorityDisinheritAfterTimeout
+ .text.pvTaskIncrementMutexHeldCount
+                0x0000b8f4       0x1c ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x0000b8f4                pvTaskIncrementMutexHeldCount
  .text.prvInsertTimerInActiveList
-                0x0000c3b8       0x48 ./SDK/rtos/FreeRTOS_S32K/Source/timers.o
+                0x0000b910       0x48 ./SDK/rtos/FreeRTOS_S32K/Source/timers.o
  .text.prvCheckForValidListAndQueue
-                0x0000c400       0x50 ./SDK/rtos/FreeRTOS_S32K/Source/timers.o
+                0x0000b958       0x50 ./SDK/rtos/FreeRTOS_S32K/Source/timers.o
  .text.xTimerCreateTimerTask
-                0x0000c450       0x4c ./SDK/rtos/FreeRTOS_S32K/Source/timers.o
-                0x0000c450                xTimerCreateTimerTask
+                0x0000b9a8       0x4c ./SDK/rtos/FreeRTOS_S32K/Source/timers.o
+                0x0000b9a8                xTimerCreateTimerTask
  .text.xTimerGenericCommand
-                0x0000c49c       0x60 ./SDK/rtos/FreeRTOS_S32K/Source/timers.o
-                0x0000c49c                xTimerGenericCommand
+                0x0000b9f4       0x60 ./SDK/rtos/FreeRTOS_S32K/Source/timers.o
+                0x0000b9f4                xTimerGenericCommand
  .text.prvSampleTimeNow
-                0x0000c4fc       0xa8 ./SDK/rtos/FreeRTOS_S32K/Source/timers.o
+                0x0000ba54       0xa8 ./SDK/rtos/FreeRTOS_S32K/Source/timers.o
  .text.prvTimerTask
-                0x0000c5a4      0x1c8 ./SDK/rtos/FreeRTOS_S32K/Source/timers.o
+                0x0000bafc      0x1c8 ./SDK/rtos/FreeRTOS_S32K/Source/timers.o
  .text.prvTaskExitError
-                0x0000c76c       0x40 ./SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/port.o
+                0x0000bcc4       0x40 ./SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/port.o
  .text.prvPortStartFirstTask
-                0x0000c7ac       0x28 ./SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/port.o
+                0x0000bd04       0x28 ./SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/port.o
  .text.vPortEnableVFP
-                0x0000c7d4       0x14 ./SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/port.o
+                0x0000bd2c       0x14 ./SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/port.o
  .text.pxPortInitialiseStack
-                0x0000c7e8       0x2c ./SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/port.o
-                0x0000c7e8                pxPortInitialiseStack
- *fill*         0x0000c814        0xc 
+                0x0000bd40       0x2c ./SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/port.o
+                0x0000bd40                pxPortInitialiseStack
+ *fill*         0x0000bd6c        0x4 
  .text.SVC_Handler
-                0x0000c820       0x24 ./SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/port.o
-                0x0000c820                SVC_Handler
+                0x0000bd70       0x24 ./SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/port.o
+                0x0000bd70                SVC_Handler
  .text.vPortEnterCritical
-                0x0000c844       0x44 ./SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/port.o
-                0x0000c844                vPortEnterCritical
+                0x0000bd94       0x44 ./SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/port.o
+                0x0000bd94                vPortEnterCritical
  .text.vPortExitCritical
-                0x0000c888       0x2c ./SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/port.o
-                0x0000c888                vPortExitCritical
- *fill*         0x0000c8b4        0xc 
+                0x0000bdd8       0x2c ./SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/port.o
+                0x0000bdd8                vPortExitCritical
+ *fill*         0x0000be04        0xc 
  .text.PendSV_Handler
-                0x0000c8c0       0x64 ./SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/port.o
-                0x0000c8c0                PendSV_Handler
+                0x0000be10       0x64 ./SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/port.o
+                0x0000be10                PendSV_Handler
  .text.SysTick_Handler
-                0x0000c924       0x2c ./SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/port.o
-                0x0000c924                SysTick_Handler
+                0x0000be74       0x2c ./SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/port.o
+                0x0000be74                SysTick_Handler
  .text.vPortSetupTimerInterrupt
-                0x0000c950       0x28 ./SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/port.o
-                0x0000c950                vPortSetupTimerInterrupt
+                0x0000bea0       0x28 ./SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/port.o
+                0x0000bea0                vPortSetupTimerInterrupt
  .text.xPortStartScheduler
-                0x0000c978      0x118 ./SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/port.o
-                0x0000c978                xPortStartScheduler
+                0x0000bec8      0x118 ./SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/port.o
+                0x0000bec8                xPortStartScheduler
  .text.vPortValidateInterruptPriority
-                0x0000ca90       0x5c ./SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/port.o
-                0x0000ca90                vPortValidateInterruptPriority
+                0x0000bfe0       0x5c ./SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/port.o
+                0x0000bfe0                vPortValidateInterruptPriority
  .text.prvInsertBlockIntoFreeList
-                0x0000caec       0x58 ./SDK/rtos/FreeRTOS_S32K/Source/portable/MemMang/heap_4.o
+                0x0000c03c       0x58 ./SDK/rtos/FreeRTOS_S32K/Source/portable/MemMang/heap_4.o
  .text.pvPortMalloc
-                0x0000cb44      0x134 ./SDK/rtos/FreeRTOS_S32K/Source/portable/MemMang/heap_4.o
-                0x0000cb44                pvPortMalloc
+                0x0000c094      0x134 ./SDK/rtos/FreeRTOS_S32K/Source/portable/MemMang/heap_4.o
+                0x0000c094                pvPortMalloc
  .text.vPortFree
-                0x0000cc78       0x6c ./SDK/rtos/FreeRTOS_S32K/Source/portable/MemMang/heap_4.o
-                0x0000cc78                vPortFree
+                0x0000c1c8       0x6c ./SDK/rtos/FreeRTOS_S32K/Source/portable/MemMang/heap_4.o
+                0x0000c1c8                vPortFree
  .text.xPortGetMinimumEverFreeHeapSize
-                0x0000cce4        0xc ./SDK/rtos/FreeRTOS_S32K/Source/portable/MemMang/heap_4.o
-                0x0000cce4                xPortGetMinimumEverFreeHeapSize
+                0x0000c234        0xc ./SDK/rtos/FreeRTOS_S32K/Source/portable/MemMang/heap_4.o
+                0x0000c234                xPortGetMinimumEverFreeHeapSize
  .text.LPTMR_init
-                0x0000ccf0       0x64 ./Sources/HardwareLib/LPTMR.o
-                0x0000ccf0                LPTMR_init
+                0x0000c240       0x64 ./Sources/HardwareLib/LPTMR.o
+                0x0000c240                LPTMR_init
  .text.LPTMR0_IRQHandler
-                0x0000cd54       0x44 ./Sources/HardwareLib/LPTMR.o
-                0x0000cd54                LPTMR0_IRQHandler
+                0x0000c2a4       0x44 ./Sources/HardwareLib/LPTMR.o
+                0x0000c2a4                LPTMR0_IRQHandler
  .text.LPUART1_transmit_char
-                0x0000cd98       0x18 ./Sources/HardwareLib/LPUART.o
-                0x0000cd98                LPUART1_transmit_char
+                0x0000c2e8       0x18 ./Sources/HardwareLib/LPUART.o
+                0x0000c2e8                LPUART1_transmit_char
  .text.LPUART1_transmit_string
-                0x0000cdb0       0x1c ./Sources/HardwareLib/LPUART.o
-                0x0000cdb0                LPUART1_transmit_string
+                0x0000c300       0x1c ./Sources/HardwareLib/LPUART.o
+                0x0000c300                LPUART1_transmit_string
  .text.LPUART1_printf
-                0x0000cdcc       0x2c ./Sources/HardwareLib/LPUART.o
-                0x0000cdcc                LPUART1_printf
+                0x0000c31c       0x2c ./Sources/HardwareLib/LPUART.o
+                0x0000c31c                LPUART1_printf
  .text.LPUART1_init
-                0x0000cdf8       0x94 ./Sources/HardwareLib/LPUART.o
-                0x0000cdf8                LPUART1_init
+                0x0000c348       0xb4 ./Sources/HardwareLib/LPUART.o
+                0x0000c348                LPUART1_init
  .text.LPUART1_RxTx_IRQHandler
-                0x0000ce8c       0x48 ./Sources/HardwareLib/LPUART.o
-                0x0000ce8c                LPUART1_RxTx_IRQHandler
+                0x0000c3fc       0x64 ./Sources/HardwareLib/LPUART.o
+                0x0000c3fc                LPUART1_RxTx_IRQHandler
  .text.LPIT0_init
-                0x0000ced4       0x4c ./Sources/HardwareLib/LP_IT_timer.o
-                0x0000ced4                LPIT0_init
+                0x0000c460       0x4c ./Sources/HardwareLib/LP_IT_timer.o
+                0x0000c460                LPIT0_init
  .text.LPIT0_Ch0_IRQHandler
-                0x0000cf20       0x1c ./Sources/HardwareLib/LP_IT_timer.o
-                0x0000cf20                LPIT0_Ch0_IRQHandler
+                0x0000c4ac       0x1c ./Sources/HardwareLib/LP_IT_timer.o
+                0x0000c4ac                LPIT0_Ch0_IRQHandler
  .text.Power_Man_Init
-                0x0000cf3c       0x1c ./Sources/HardwareLib/PowerSwitch.o
-                0x0000cf3c                Power_Man_Init
- .text.Read_User_Option
-                0x0000cf58       0x48 ./Sources/HardwareLib/PowerSwitch.o
-                0x0000cf58                Read_User_Option
- .text.Peripheral_IO_Level_Ctrl
-                0x0000cfa0       0x24 ./Sources/HardwareLib/PowerSwitch.o
-                0x0000cfa0                Peripheral_IO_Level_Ctrl
- .text.Power_Switch
-                0x0000cfc4      0x1dc ./Sources/HardwareLib/PowerSwitch.o
-                0x0000cfc4                Power_Switch
+                0x0000c4c8       0x1c ./Sources/HardwareLib/PowerSwitch.o
+                0x0000c4c8                Power_Man_Init
  .text.RGB_LED_KEY_init
-                0x0000d1a0       0xa4 ./Sources/HardwareLib/RGB_LED.o
-                0x0000d1a0                RGB_LED_KEY_init
- .text.SW2_key  0x0000d244       0x10 ./Sources/HardwareLib/RGB_LED.o
-                0x0000d244                SW2_key
- .text.SW3_key  0x0000d254       0x10 ./Sources/HardwareLib/RGB_LED.o
-                0x0000d254                SW3_key
+                0x0000c4e4       0xa4 ./Sources/HardwareLib/RGB_LED.o
+                0x0000c4e4                RGB_LED_KEY_init
+ .text.SW2_key  0x0000c588       0x10 ./Sources/HardwareLib/RGB_LED.o
+                0x0000c588                SW2_key
+ .text.SW3_key  0x0000c598       0x10 ./Sources/HardwareLib/RGB_LED.o
+                0x0000c598                SW3_key
  .text.PORTC_IRQHandler
-                0x0000d264       0x40 ./Sources/HardwareLib/RGB_LED.o
-                0x0000d264                PORTC_IRQHandler
+                0x0000c5a8       0x40 ./Sources/HardwareLib/RGB_LED.o
+                0x0000c5a8                PORTC_IRQHandler
  .text.SPI_OLED_SCLK_Clr
-                0x0000d2a4       0x10 ./Sources/HardwareLib/SPI_OLED.o
-                0x0000d2a4                SPI_OLED_SCLK_Clr
+                0x0000c5e8       0x10 ./Sources/HardwareLib/SPI_OLED.o
+                0x0000c5e8                SPI_OLED_SCLK_Clr
  .text.SPI_OLED_SCLK_Set
-                0x0000d2b4       0x10 ./Sources/HardwareLib/SPI_OLED.o
-                0x0000d2b4                SPI_OLED_SCLK_Set
+                0x0000c5f8       0x10 ./Sources/HardwareLib/SPI_OLED.o
+                0x0000c5f8                SPI_OLED_SCLK_Set
  .text.SPI_OLED_SDIN_Clr
-                0x0000d2c4       0x10 ./Sources/HardwareLib/SPI_OLED.o
-                0x0000d2c4                SPI_OLED_SDIN_Clr
+                0x0000c608       0x10 ./Sources/HardwareLib/SPI_OLED.o
+                0x0000c608                SPI_OLED_SDIN_Clr
  .text.SPI_OLED_SDIN_Set
-                0x0000d2d4       0x10 ./Sources/HardwareLib/SPI_OLED.o
-                0x0000d2d4                SPI_OLED_SDIN_Set
+                0x0000c618       0x10 ./Sources/HardwareLib/SPI_OLED.o
+                0x0000c618                SPI_OLED_SDIN_Set
  .text.SPI_OLED_RST_Clr
-                0x0000d2e4       0x10 ./Sources/HardwareLib/SPI_OLED.o
-                0x0000d2e4                SPI_OLED_RST_Clr
+                0x0000c628       0x10 ./Sources/HardwareLib/SPI_OLED.o
+                0x0000c628                SPI_OLED_RST_Clr
  .text.SPI_OLED_RST_Set
-                0x0000d2f4       0x10 ./Sources/HardwareLib/SPI_OLED.o
-                0x0000d2f4                SPI_OLED_RST_Set
+                0x0000c638       0x10 ./Sources/HardwareLib/SPI_OLED.o
+                0x0000c638                SPI_OLED_RST_Set
  .text.SPI_OLED_DC_Clr
-                0x0000d304       0x10 ./Sources/HardwareLib/SPI_OLED.o
-                0x0000d304                SPI_OLED_DC_Clr
+                0x0000c648       0x10 ./Sources/HardwareLib/SPI_OLED.o
+                0x0000c648                SPI_OLED_DC_Clr
  .text.SPI_OLED_DC_Set
-                0x0000d314       0x10 ./Sources/HardwareLib/SPI_OLED.o
-                0x0000d314                SPI_OLED_DC_Set
+                0x0000c658       0x10 ./Sources/HardwareLib/SPI_OLED.o
+                0x0000c658                SPI_OLED_DC_Set
  .text.SPI_OLED_CS_Clr
-                0x0000d324       0x10 ./Sources/HardwareLib/SPI_OLED.o
-                0x0000d324                SPI_OLED_CS_Clr
+                0x0000c668       0x10 ./Sources/HardwareLib/SPI_OLED.o
+                0x0000c668                SPI_OLED_CS_Clr
  .text.SPI_OLED_CS_Set
-                0x0000d334       0x10 ./Sources/HardwareLib/SPI_OLED.o
-                0x0000d334                SPI_OLED_CS_Set
+                0x0000c678       0x10 ./Sources/HardwareLib/SPI_OLED.o
+                0x0000c678                SPI_OLED_CS_Set
  .text.SPI_IO_Init
-                0x0000d344       0x78 ./Sources/HardwareLib/SPI_OLED.o
-                0x0000d344                SPI_IO_Init
+                0x0000c688       0x78 ./Sources/HardwareLib/SPI_OLED.o
+                0x0000c688                SPI_IO_Init
  .text.SPI_OLED_Write_Byte
-                0x0000d3bc       0x46 ./Sources/HardwareLib/SPI_OLED.o
-                0x0000d3bc                SPI_OLED_Write_Byte
+                0x0000c700       0x46 ./Sources/HardwareLib/SPI_OLED.o
+                0x0000c700                SPI_OLED_Write_Byte
  .text.SPI_OLED_Set_Pos
-                0x0000d402       0x2c ./Sources/HardwareLib/SPI_OLED.o
-                0x0000d402                SPI_OLED_Set_Pos
- *fill*         0x0000d42e        0x2 
+                0x0000c746       0x2c ./Sources/HardwareLib/SPI_OLED.o
+                0x0000c746                SPI_OLED_Set_Pos
+ *fill*         0x0000c772        0x2 
  .text.SPI_OLED_Refresh
-                0x0000d430       0x50 ./Sources/HardwareLib/SPI_OLED.o
-                0x0000d430                SPI_OLED_Refresh
+                0x0000c774       0x50 ./Sources/HardwareLib/SPI_OLED.o
+                0x0000c774                SPI_OLED_Refresh
  .text.SPI_OLED_Clear
-                0x0000d480       0x28 ./Sources/HardwareLib/SPI_OLED.o
-                0x0000d480                SPI_OLED_Clear
+                0x0000c7c4       0x28 ./Sources/HardwareLib/SPI_OLED.o
+                0x0000c7c4                SPI_OLED_Clear
  .text.SPI_OLED_PowerOn_Init
-                0x0000d4a8      0x110 ./Sources/HardwareLib/SPI_OLED.o
-                0x0000d4a8                SPI_OLED_PowerOn_Init
+                0x0000c7ec      0x110 ./Sources/HardwareLib/SPI_OLED.o
+                0x0000c7ec                SPI_OLED_PowerOn_Init
  .text.SPI_OLED_Init
-                0x0000d5b8        0xc ./Sources/HardwareLib/SPI_OLED.o
-                0x0000d5b8                SPI_OLED_Init
+                0x0000c8fc        0xc ./Sources/HardwareLib/SPI_OLED.o
+                0x0000c8fc                SPI_OLED_Init
  .text.SPI_OLED_DrawPoint
-                0x0000d5c4       0x38 ./Sources/HardwareLib/SPI_OLED.o
-                0x0000d5c4                SPI_OLED_DrawPoint
+                0x0000c908       0x38 ./Sources/HardwareLib/SPI_OLED.o
+                0x0000c908                SPI_OLED_DrawPoint
  .text.SPI_OLED_ShowChar
-                0x0000d5fc      0x110 ./Sources/HardwareLib/SPI_OLED.o
-                0x0000d5fc                SPI_OLED_ShowChar
+                0x0000c940      0x110 ./Sources/HardwareLib/SPI_OLED.o
+                0x0000c940                SPI_OLED_ShowChar
  .text.SPI_OLED_ShowString
-                0x0000d70c       0x50 ./Sources/HardwareLib/SPI_OLED.o
-                0x0000d70c                SPI_OLED_ShowString
+                0x0000ca50       0x50 ./Sources/HardwareLib/SPI_OLED.o
+                0x0000ca50                SPI_OLED_ShowString
  .text.systick_later_init
-                0x0000d75c       0x20 ./Sources/HardwareLib/latency.o
-                0x0000d75c                systick_later_init
+                0x0000caa0       0x20 ./Sources/HardwareLib/latency.o
+                0x0000caa0                systick_later_init
  .text.later_us
-                0x0000d77c       0x28 ./Sources/HardwareLib/latency.o
-                0x0000d77c                later_us
+                0x0000cac0       0x28 ./Sources/HardwareLib/latency.o
+                0x0000cac0                later_us
  .text.later_ms
-                0x0000d7a4       0x22 ./Sources/HardwareLib/latency.o
-                0x0000d7a4                later_ms
- *fill*         0x0000d7c6        0x2 
+                0x0000cae8       0x22 ./Sources/HardwareLib/latency.o
+                0x0000cae8                later_ms
+ *fill*         0x0000cb0a        0x2 
  .text.start_task
-                0x0000d7c8       0x58 ./Sources/RTOS_Task.o
-                0x0000d7c8                start_task
+                0x0000cb0c       0x58 ./Sources/RTOS_Task.o
+                0x0000cb0c                start_task
  .text.key_task
-                0x0000d820       0x40 ./Sources/RTOS_Task.o
-                0x0000d820                key_task
+                0x0000cb64       0x40 ./Sources/RTOS_Task.o
+                0x0000cb64                key_task
  .text.show_task
-                0x0000d860       0x5c ./Sources/RTOS_Task.o
-                0x0000d860                show_task
+                0x0000cba4       0xb0 ./Sources/RTOS_Task.o
+                0x0000cba4                show_task
  .text.init_fcn
-                0x0000d8bc       0x48 ./Sources/RTOS_Task.o
-                0x0000d8bc                init_fcn
+                0x0000cc54       0x48 ./Sources/RTOS_Task.o
+                0x0000cc54                init_fcn
  .text.rtos_start
-                0x0000d904       0x34 ./Sources/RTOS_Task.o
-                0x0000d904                rtos_start
- .text.main     0x0000d938       0x18 ./Sources/main.o
-                0x0000d938                main
- .text.memcpy   0x0000d950       0x16 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memcpy-stub.o)
-                0x0000d950                memcpy
- .text.memset   0x0000d966       0x10 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memset.o)
-                0x0000d966                memset
+                0x0000cc9c       0x34 ./Sources/RTOS_Task.o
+                0x0000cc9c                rtos_start
+ .text.main     0x0000ccd0       0x18 ./Sources/main.o
+                0x0000ccd0                main
+ .text.memcpy   0x0000cce8       0x16 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memcpy-stub.o)
+                0x0000cce8                memcpy
+ .text.memset   0x0000ccfe       0x10 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memset.o)
+                0x0000ccfe                memset
  .text._vsprintf_r
-                0x0000d976       0x30 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-vsprintf.o)
-                0x0000d976                _vsprintf_r
-                0x0000d976                _vsiprintf_r
- *fill*         0x0000d9a6        0x2 
+                0x0000cd0e       0x30 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-vsprintf.o)
+                0x0000cd0e                _vsprintf_r
+                0x0000cd0e                _vsiprintf_r
+ *fill*         0x0000cd3e        0x2 
  .text.vsprintf
-                0x0000d9a8       0x14 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-vsprintf.o)
-                0x0000d9a8                vsiprintf
-                0x0000d9a8                vsprintf
+                0x0000cd40       0x14 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-vsprintf.o)
+                0x0000cd40                vsiprintf
+                0x0000cd40                vsprintf
  .text.__ssputs_r
-                0x0000d9bc       0xb6 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-nano-svfprintf.o)
-                0x0000d9bc                __ssputs_r
- *fill*         0x0000da72        0x2 
+                0x0000cd54       0xb6 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-nano-svfprintf.o)
+                0x0000cd54                __ssputs_r
+ *fill*         0x0000ce0a        0x2 
  .text._svfprintf_r
-                0x0000da74      0x1e8 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-nano-svfprintf.o)
-                0x0000da74                _svfiprintf_r
-                0x0000da74                _svfprintf_r
+                0x0000ce0c      0x1e8 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-nano-svfprintf.o)
+                0x0000ce0c                _svfiprintf_r
+                0x0000ce0c                _svfprintf_r
  .text._printf_common
-                0x0000dc5c       0xec E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-nano-vfprintf_i.o)
-                0x0000dc5c                _printf_common
+                0x0000cff4       0xec E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000cff4                _printf_common
  .text._printf_i
-                0x0000dd48      0x240 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-nano-vfprintf_i.o)
-                0x0000dd48                _printf_i
- .text.memmove  0x0000df88       0x34 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memmove.o)
-                0x0000df88                memmove
- .text._free_r  0x0000dfbc       0x9c E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-nano-freer.o)
-                0x0000dfbc                _free_r
+                0x0000d0e0      0x240 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000d0e0                _printf_i
+ .text.memmove  0x0000d320       0x34 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memmove.o)
+                0x0000d320                memmove
+ .text._free_r  0x0000d354       0x9c E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-nano-freer.o)
+                0x0000d354                _free_r
  .text._malloc_r
-                0x0000e058       0xbc E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-nano-mallocr.o)
-                0x0000e058                _malloc_r
+                0x0000d3f0       0xbc E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-nano-mallocr.o)
+                0x0000d3f0                _malloc_r
  .text._realloc_r
-                0x0000e114       0x4c E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-nano-reallocr.o)
-                0x0000e114                _realloc_r
- .text._sbrk_r  0x0000e160       0x20 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-sbrkr.o)
-                0x0000e160                _sbrk_r
+                0x0000d4ac       0x4c E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-nano-reallocr.o)
+                0x0000d4ac                _realloc_r
+ .text._sbrk_r  0x0000d4f8       0x20 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-sbrkr.o)
+                0x0000d4f8                _sbrk_r
  .text.__malloc_lock
-                0x0000e180        0x2 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-mlock.o)
-                0x0000e180                __malloc_lock
+                0x0000d518        0x2 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-mlock.o)
+                0x0000d518                __malloc_lock
  .text.__malloc_unlock
-                0x0000e182        0x2 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-mlock.o)
-                0x0000e182                __malloc_unlock
+                0x0000d51a        0x2 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-mlock.o)
+                0x0000d51a                __malloc_unlock
  .text._malloc_usable_size_r
-                0x0000e184       0x12 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-nano-msizer.o)
-                0x0000e184                _malloc_usable_size_r
- *fill*         0x0000e196        0x2 
- .text._sbrk    0x0000e198       0x1c E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libnosys.a(sbrk.o)
-                0x0000e198                _sbrk
+                0x0000d51c       0x12 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-nano-msizer.o)
+                0x0000d51c                _malloc_usable_size_r
+ *fill*         0x0000d52e        0x2 
+ .text._sbrk    0x0000d530       0x1c E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libnosys.a(sbrk.o)
+                0x0000d530                _sbrk
  *(.rodata)
  *(.rodata*)
  .rodata.Flash1_InitConfig0
-                0x0000e1b4       0x14 ./Generated_Code/Flash1.o
-                0x0000e1b4                Flash1_InitConfig0
+                0x0000d54c       0x14 ./Generated_Code/Flash1.o
+                0x0000d54c                Flash1_InitConfig0
  .rodata.clockNameMappings
-                0x0000e1c8       0x9e ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
-                0x0000e1c8                clockNameMappings
- *fill*         0x0000e266        0x2 
+                0x0000d560       0x9e ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
+                0x0000d560                clockNameMappings
+ *fill*         0x0000d5fe        0x2 
  .rodata.maxSysClksInHSRUN.7598
-                0x0000e268       0x54 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
+                0x0000d600       0x54 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
  .rodata.maxSysClksInRUN.7597
-                0x0000e2bc       0x54 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
+                0x0000d654       0x54 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
  .rodata.maxSysClksInVLPR.7596
-                0x0000e310       0x54 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
- .rodata.peripheralFeaturesList
-                0x0000e364       0x4f ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
-                0x0000e364                peripheralFeaturesList
- *fill*         0x0000e3b3        0x1 
- .rodata.sysClkDivMappings.7744
-                0x0000e3b4       0x11 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
- *fill*         0x0000e3c5        0x3 
+                0x0000d6a8       0x54 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
  .rodata.vTaskStartScheduler.str1.4
-                0x0000e3c8        0x5 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
- *fill*         0x0000e3cd        0x3 
+                0x0000d6fc        0x5 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+ *fill*         0x0000d701        0x3 
  .rodata.xTimerCreateTimerTask.str1.4
-                0x0000e3d0        0x8 ./SDK/rtos/FreeRTOS_S32K/Source/timers.o
+                0x0000d704        0x8 ./SDK/rtos/FreeRTOS_S32K/Source/timers.o
+ .rodata.LPUART1_RxTx_IRQHandler.str1.4
+                0x0000d70c       0x3c ./Sources/HardwareLib/LPUART.o
  .rodata.LPUART1_init.str1.4
-                0x0000e3d8       0x1f ./Sources/HardwareLib/LPUART.o
- *fill*         0x0000e3f7        0x1 
+                0x0000d748       0x3e ./Sources/HardwareLib/LPUART.o
+ *fill*         0x0000d786        0x2 
  .rodata.ASICII_0806
-                0x0000e3f8      0x228 ./Sources/HardwareLib/OLED_FONT.o
-                0x0000e3f8                ASICII_0806
+                0x0000d788      0x228 ./Sources/HardwareLib/OLED_FONT.o
+                0x0000d788                ASICII_0806
  .rodata.ASICII_1206
-                0x0000e620      0x474 ./Sources/HardwareLib/OLED_FONT.o
-                0x0000e620                ASICII_1206
+                0x0000d9b0      0x474 ./Sources/HardwareLib/OLED_FONT.o
+                0x0000d9b0                ASICII_1206
  .rodata.ASICII_1608
-                0x0000ea94      0x5f0 ./Sources/HardwareLib/OLED_FONT.o
-                0x0000ea94                ASICII_1608
+                0x0000de24      0x5f0 ./Sources/HardwareLib/OLED_FONT.o
+                0x0000de24                ASICII_1608
  .rodata.ASICII_2412
-                0x0000f084      0xd5c ./Sources/HardwareLib/OLED_FONT.o
-                0x0000f084                ASICII_2412
- .rodata.Power_Switch.str1.4
-                0x0000fde0      0x3f7 ./Sources/HardwareLib/PowerSwitch.o
- *fill*         0x000101d7        0x1 
- .rodata.Print_Current_Mode.str1.4
-                0x000101d8       0x4c ./Sources/HardwareLib/PowerSwitch.o
- .rodata.Read_User_Option.str1.4
-                0x00010224       0x12 ./Sources/HardwareLib/PowerSwitch.o
- *fill*         0x00010236        0x2 
+                0x0000e414      0xd5c ./Sources/HardwareLib/OLED_FONT.o
+                0x0000e414                ASICII_2412
  .rodata.key_task.str1.4
-                0x00010238       0x1e ./Sources/RTOS_Task.o
- *fill*         0x00010256        0x2 
+                0x0000f170       0x1e ./Sources/RTOS_Task.o
+ *fill*         0x0000f18e        0x2 
  .rodata.rtos_start.str1.4
-                0x00010258        0xb ./Sources/RTOS_Task.o
- *fill*         0x00010263        0x1 
+                0x0000f190        0xb ./Sources/RTOS_Task.o
+ *fill*         0x0000f19b        0x1 
  .rodata.show_task.str1.4
-                0x00010264        0xe ./Sources/RTOS_Task.o
- *fill*         0x00010272        0x2 
+                0x0000f19c       0x27 ./Sources/RTOS_Task.o
+                                 0x2b (size before relaxing)
+ *fill*         0x0000f1c3        0x1 
  .rodata.start_task.str1.4
-                0x00010274       0x18 ./Sources/RTOS_Task.o
+                0x0000f1c4       0x18 ./Sources/RTOS_Task.o
                                  0x16 (size before relaxing)
  .rodata._svfprintf_r.str1.1
-                0x0001028c       0x11 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-nano-svfprintf.o)
+                0x0000f1dc       0x11 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-nano-svfprintf.o)
  .rodata._printf_i.str1.1
-                0x0001029d       0x22 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000f1ed       0x22 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-nano-vfprintf_i.o)
  *(.init)
- *fill*         0x000102bf        0x1 
- .init          0x000102c0        0x4 e:/nxp/s32ds_arm_v2.2/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
-                0x000102c0                _init
+ *fill*         0x0000f20f        0x1 
+ .init          0x0000f210        0x4 e:/nxp/s32ds_arm_v2.2/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
+                0x0000f210                _init
  *(.fini)
- .fini          0x000102c4        0x4 e:/nxp/s32ds_arm_v2.2/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
-                0x000102c4                _fini
+ .fini          0x0000f214        0x4 e:/nxp/s32ds_arm_v2.2/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
+                0x0000f214                _fini
  *(.eh_frame)
-                0x000102c8                . = ALIGN (0x4)
+                0x0000f218                . = ALIGN (0x4)
 
-.glue_7         0x000102c8        0x0
- .glue_7        0x000102c8        0x0 linker stubs
+.glue_7         0x0000f218        0x0
+ .glue_7        0x0000f218        0x0 linker stubs
 
-.glue_7t        0x000102c8        0x0
- .glue_7t       0x000102c8        0x0 linker stubs
+.glue_7t        0x0000f218        0x0
+ .glue_7t       0x0000f218        0x0 linker stubs
 
-.vfp11_veneer   0x000102c8        0x0
- .vfp11_veneer  0x000102c8        0x0 linker stubs
+.vfp11_veneer   0x0000f218        0x0
+ .vfp11_veneer  0x0000f218        0x0 linker stubs
 
-.v4_bx          0x000102c8        0x0
- .v4_bx         0x000102c8        0x0 linker stubs
+.v4_bx          0x0000f218        0x0
+ .v4_bx         0x0000f218        0x0 linker stubs
 
-.iplt           0x000102c8        0x0
- .iplt          0x000102c8        0x0 e:/nxp/s32ds_arm_v2.2/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+.iplt           0x0000f218        0x0
+ .iplt          0x0000f218        0x0 e:/nxp/s32ds_arm_v2.2/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
 
-.rel.dyn        0x000102c8        0x0
- .rel.iplt      0x000102c8        0x0 e:/nxp/s32ds_arm_v2.2/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+.rel.dyn        0x0000f218        0x0
+ .rel.iplt      0x0000f218        0x0 e:/nxp/s32ds_arm_v2.2/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
 
-.ARM            0x000102c8        0x0
-                0x000102c8                __exidx_start = .
+.ARM            0x0000f218        0x0
+                0x0000f218                __exidx_start = .
  *(.ARM.exidx*)
-                0x000102c8                __exidx_end = .
-                0x000102c8                __etext = .
-                0x000102c8                __DATA_ROM = .
+                0x0000f218                __exidx_end = .
+                0x0000f218                __etext = .
+                0x0000f218                __DATA_ROM = .
 
 .interrupts_ram
                 0x1fff8000      0x400
@@ -1676,7 +1672,7 @@ LOAD e:/nxp/s32ds_arm_v2.2/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../
                 0x1fff8000                __VECTOR_RAM = DEFINED (__flash_vector_table__)?ORIGIN (m_interrupts):__VECTOR_RAM__
                 0x00000400                __RAM_VECTOR_TABLE_SIZE = DEFINED (__flash_vector_table__)?0x0:(__interrupts_ram_end__ - __interrupts_ram_start__)
 
-.data           0x1fff8400      0x1e0 load address 0x000102c8
+.data           0x1fff8400      0x1e0 load address 0x0000f218
                 0x1fff8400                . = ALIGN (0x4)
                 0x1fff8400                __DATA_RAM = .
                 0x1fff8400                __data_start__ = .
@@ -1726,13 +1722,13 @@ LOAD e:/nxp/s32ds_arm_v2.2/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../
                 0x1fff8580       0x60 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-impure.o)
                 0x1fff85e0                . = ALIGN (0x4)
                 0x1fff85e0                __data_end__ = .
-                0x000104a8                __DATA_END = (__DATA_ROM + (__data_end__ - __data_start__))
-                0x000104a8                __CODE_ROM = __DATA_END
+                0x0000f3f8                __DATA_END = (__DATA_ROM + (__data_end__ - __data_start__))
+                0x0000f3f8                __CODE_ROM = __DATA_END
 
-.igot.plt       0x1fff85e0        0x0 load address 0x000104a8
+.igot.plt       0x1fff85e0        0x0 load address 0x0000f3f8
  .igot.plt      0x1fff85e0        0x0 e:/nxp/s32ds_arm_v2.2/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
 
-.code           0x1fff85e0        0x0 load address 0x000104a8
+.code           0x1fff85e0        0x0 load address 0x0000f3f8
                 0x1fff85e0                . = ALIGN (0x4)
                 0x1fff85e0                __CODE_RAM = .
                 0x1fff85e0                __code_start__ = .
@@ -1741,18 +1737,18 @@ LOAD e:/nxp/s32ds_arm_v2.2/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../
                 0x1fff85e0                . = ALIGN (0x4)
                 0x1fff85e0                __code_end__ = .
                 0x1fff85e0                __code_ram_end__ = .
-                0x000104a8                __CODE_END = (__CODE_ROM + (__code_end__ - __code_start__))
-                0x000104a8                __CUSTOM_ROM = __CODE_END
+                0x0000f3f8                __CODE_END = (__CODE_ROM + (__code_end__ - __code_start__))
+                0x0000f3f8                __CUSTOM_ROM = __CODE_END
 
 .customSectionBlock
-                0x20000000        0x0 load address 0x000104a8
+                0x20000000        0x0 load address 0x0000f3f8
                 0x20000000                __customSection_start__ = .
  *(.customSection)
                 0x20000000                __customSection_end__ = .
-                0x000104a8                __CUSTOM_END = (__CUSTOM_ROM + (__customSection_end__ - __customSection_start__))
-                0x000104a8                __rom_end = __CUSTOM_END
+                0x0000f3f8                __CUSTOM_END = (__CUSTOM_ROM + (__customSection_end__ - __customSection_start__))
+                0x0000f3f8                __rom_end = __CUSTOM_END
 
-.bss            0x20000000     0x2810
+.bss            0x20000000     0x2804
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                __BSS_START = .
                 0x20000000                __bss_start__ = .
@@ -1774,160 +1770,151 @@ LOAD e:/nxp/s32ds_arm_v2.2/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../
  .bss.g_xtal0ClkFreq
                 0x20000018        0x4 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
                 0x20000018                g_xtal0ClkFreq
- .bss.changeClkVlp
-                0x2000001c        0x1 ./SDK/platform/drivers/src/power/S32K1xx/power_manager_S32K1xx.o
  .bss.enableFIRC
-                0x2000001d        0x1 ./SDK/platform/drivers/src/power/S32K1xx/power_manager_S32K1xx.o
+                0x2000001c        0x1 ./SDK/platform/drivers/src/power/S32K1xx/power_manager_S32K1xx.o
  .bss.enableSOSC
-                0x2000001e        0x1 ./SDK/platform/drivers/src/power/S32K1xx/power_manager_S32K1xx.o
+                0x2000001d        0x1 ./SDK/platform/drivers/src/power/S32K1xx/power_manager_S32K1xx.o
  .bss.enableSPLL
-                0x2000001f        0x1 ./SDK/platform/drivers/src/power/S32K1xx/power_manager_S32K1xx.o
+                0x2000001e        0x1 ./SDK/platform/drivers/src/power/S32K1xx/power_manager_S32K1xx.o
+ *fill*         0x2000001f        0x1 
  .bss.gPowerManagerState
                 0x20000020       0x10 ./SDK/platform/drivers/src/power/S32K1xx/power_manager_S32K1xx.o
                 0x20000020                gPowerManagerState
- .bss.sysClkConfig
-                0x20000030        0x8 ./SDK/platform/drivers/src/power/S32K1xx/power_manager_S32K1xx.o
  .bss.pxCurrentTCB
-                0x20000038        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
-                0x20000038                pxCurrentTCB
+                0x20000030        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x20000030                pxCurrentTCB
  .bss.pxDelayedTaskList
-                0x2000003c        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x20000034        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
  .bss.pxOverflowDelayedTaskList
-                0x20000040        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x20000038        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
  .bss.pxReadyTasksLists
-                0x20000044      0x140 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x2000003c      0x140 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
  .bss.ulTaskSwitchedInTime
-                0x20000184        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x2000017c        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
  .bss.uxCurrentNumberOfTasks
-                0x20000188        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x20000180        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
  .bss.uxDeletedTasksWaitingCleanUp
-                0x2000018c        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x20000184        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
  .bss.uxPendedTicks
-                0x20000190        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x20000188        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
  .bss.uxSchedulerSuspended
-                0x20000194        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x2000018c        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
  .bss.uxTaskNumber
-                0x20000198        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x20000190        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
  .bss.uxTopReadyPriority
-                0x2000019c        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x20000194        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
  .bss.xDelayedTaskList1
-                0x200001a0       0x14 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x20000198       0x14 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
  .bss.xDelayedTaskList2
-                0x200001b4       0x14 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x200001ac       0x14 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
  .bss.xIdleTaskHandle
-                0x200001c8        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x200001c0        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
  .bss.xNextTaskUnblockTime
-                0x200001cc        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x200001c4        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
  .bss.xNumOfOverflows
-                0x200001d0        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x200001c8        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
  .bss.xPendingReadyList
-                0x200001d4       0x14 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x200001cc       0x14 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
  .bss.xSchedulerRunning
-                0x200001e8        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x200001e0        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
  .bss.xSuspendedTaskList
-                0x200001ec       0x14 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x200001e4       0x14 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
  .bss.xTasksWaitingTermination
-                0x20000200       0x14 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x200001f8       0x14 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
  .bss.xTickCount
-                0x20000214        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x2000020c        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
  .bss.xYieldPending
-                0x20000218        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
+                0x20000210        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
  .bss.pxCurrentTimerList
-                0x2000021c        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/timers.o
+                0x20000214        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/timers.o
  .bss.pxOverflowTimerList
-                0x20000220        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/timers.o
+                0x20000218        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/timers.o
  .bss.xActiveTimerList1
-                0x20000224       0x14 ./SDK/rtos/FreeRTOS_S32K/Source/timers.o
+                0x2000021c       0x14 ./SDK/rtos/FreeRTOS_S32K/Source/timers.o
  .bss.xActiveTimerList2
-                0x20000238       0x14 ./SDK/rtos/FreeRTOS_S32K/Source/timers.o
+                0x20000230       0x14 ./SDK/rtos/FreeRTOS_S32K/Source/timers.o
  .bss.xLastTime.6399
-                0x2000024c        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/timers.o
+                0x20000244        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/timers.o
  .bss.xTimerQueue
-                0x20000250        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/timers.o
+                0x20000248        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/timers.o
  .bss.xTimerTaskHandle
-                0x20000254        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/timers.o
+                0x2000024c        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/timers.o
  .bss.ucMaxSysCallPriority
-                0x20000258        0x1 ./SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/port.o
- *fill*         0x20000259        0x3 
+                0x20000250        0x1 ./SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/port.o
+ *fill*         0x20000251        0x3 
  .bss.ulMaxPRIGROUPValue
-                0x2000025c        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/port.o
- .bss.pxEnd     0x20000260        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/portable/MemMang/heap_4.o
- .bss.ucHeap    0x20000264     0x2000 ./SDK/rtos/FreeRTOS_S32K/Source/portable/MemMang/heap_4.o
+                0x20000254        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/port.o
+ .bss.pxEnd     0x20000258        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/portable/MemMang/heap_4.o
+ .bss.ucHeap    0x2000025c     0x2000 ./SDK/rtos/FreeRTOS_S32K/Source/portable/MemMang/heap_4.o
  .bss.xBlockAllocatedBit
-                0x20002264        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/portable/MemMang/heap_4.o
+                0x2000225c        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/portable/MemMang/heap_4.o
  .bss.xFreeBytesRemaining
-                0x20002268        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/portable/MemMang/heap_4.o
+                0x20002260        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/portable/MemMang/heap_4.o
  .bss.xMinimumEverFreeBytesRemaining
-                0x2000226c        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/portable/MemMang/heap_4.o
- .bss.xStart    0x20002270        0x8 ./SDK/rtos/FreeRTOS_S32K/Source/portable/MemMang/heap_4.o
+                0x20002264        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/portable/MemMang/heap_4.o
+ .bss.xStart    0x20002268        0x8 ./SDK/rtos/FreeRTOS_S32K/Source/portable/MemMang/heap_4.o
  .bss.flashConfig
-                0x20002278       0x1c ./Sources/HardwareLib/FlashWriteRead.o
-                0x20002278                flashConfig
+                0x20002270       0x1c ./Sources/HardwareLib/FlashWriteRead.o
+                0x20002270                flashConfig
  .bss.LPUART1_TX_BUF
-                0x20002294       0xc8 ./Sources/HardwareLib/LPUART.o
-                0x20002294                LPUART1_TX_BUF
+                0x2000228c       0xc8 ./Sources/HardwareLib/LPUART.o
+                0x2000228c                LPUART1_TX_BUF
  .bss.LPUART_RX_que
-                0x2000235c        0x4 ./Sources/HardwareLib/LPUART.o
-                0x2000235c                LPUART_RX_que
- .bss.REV_FLAG  0x20002360        0x2 ./Sources/HardwareLib/LPUART.o
-                0x20002360                REV_FLAG
- .bss.rev_c     0x20002362        0x1 ./Sources/HardwareLib/LPUART.o
-                0x20002362                rev_c
- *fill*         0x20002363        0x1 
+                0x20002354        0x4 ./Sources/HardwareLib/LPUART.o
+                0x20002354                LPUART_RX_que
+ .bss.RX_Cnt_Semph
+                0x20002358        0x4 ./Sources/HardwareLib/LPUART.o
+                0x20002358                RX_Cnt_Semph
+ .bss.rev_c     0x2000235c        0x1 ./Sources/HardwareLib/LPUART.o
+                0x2000235c                rev_c
+ *fill*         0x2000235d        0x3 
  .bss.CPU_RunTime
-                0x20002364        0x4 ./Sources/HardwareLib/LP_IT_timer.o
-                0x20002364                CPU_RunTime
- .bss.frequency
-                0x20002368        0x4 ./Sources/HardwareLib/PowerSwitch.o
-                0x20002368                frequency
- .bss.option    0x2000236c        0x1 ./Sources/HardwareLib/PowerSwitch.o
-                0x2000236c                option
- *fill*         0x2000236d        0x1 
- .bss.retV      0x2000236e        0x2 ./Sources/HardwareLib/PowerSwitch.o
-                0x2000236e                retV
+                0x20002360        0x4 ./Sources/HardwareLib/LP_IT_timer.o
+                0x20002360                CPU_RunTime
  .bss.SPI_OLED_GRAM
-                0x20002370      0x480 ./Sources/HardwareLib/SPI_OLED.o
-                0x20002370                SPI_OLED_GRAM
+                0x20002364      0x480 ./Sources/HardwareLib/SPI_OLED.o
+                0x20002364                SPI_OLED_GRAM
  .bss.key_task_handler
-                0x200027f0        0x4 ./Sources/RTOS_Task.o
-                0x200027f0                key_task_handler
+                0x200027e4        0x4 ./Sources/RTOS_Task.o
+                0x200027e4                key_task_handler
  .bss.show_task_handler
-                0x200027f4        0x4 ./Sources/RTOS_Task.o
-                0x200027f4                show_task_handler
+                0x200027e8        0x4 ./Sources/RTOS_Task.o
+                0x200027e8                show_task_handler
  .bss.start_task_handler
-                0x200027f8        0x4 ./Sources/RTOS_Task.o
-                0x200027f8                start_task_handler
+                0x200027ec        0x4 ./Sources/RTOS_Task.o
+                0x200027ec                start_task_handler
  .bss.exit_code
-                0x200027fc        0x4 ./Sources/main.o
-                0x200027fc                exit_code
+                0x200027f0        0x4 ./Sources/main.o
+                0x200027f0                exit_code
  .bss.__malloc_free_list
-                0x20002800        0x4 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-nano-mallocr.o)
-                0x20002800                __malloc_free_list
+                0x200027f4        0x4 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-nano-mallocr.o)
+                0x200027f4                __malloc_free_list
  .bss.__malloc_sbrk_start
-                0x20002804        0x4 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-nano-mallocr.o)
-                0x20002804                __malloc_sbrk_start
+                0x200027f8        0x4 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-nano-mallocr.o)
+                0x200027f8                __malloc_sbrk_start
  .bss.heap_end.5365
-                0x20002808        0x4 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libnosys.a(sbrk.o)
+                0x200027fc        0x4 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libnosys.a(sbrk.o)
  *(COMMON)
- COMMON         0x2000280c        0x4 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-reent.o)
-                0x2000280c                errno
-                0x20002810                . = ALIGN (0x4)
-                0x20002810                __bss_end__ = .
-                0x20002810                __BSS_END = .
+ COMMON         0x20002800        0x4 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-reent.o)
+                0x20002800                errno
+                0x20002804                . = ALIGN (0x4)
+                0x20002804                __bss_end__ = .
+                0x20002804                __BSS_END = .
 
-.heap           0x20002810      0x400
-                0x20002810                . = ALIGN (0x8)
-                0x20002810                __end__ = .
-                0x20002810                __heap_start__ = .
-                0x20002810                PROVIDE (end, .)
+.heap           0x20002804      0x404
+                0x20002808                . = ALIGN (0x8)
+ *fill*         0x20002804        0x4 
+                0x20002808                __end__ = .
+                0x20002808                __heap_start__ = .
+                0x20002808                PROVIDE (end, .)
                 [!provide]                PROVIDE (_end, .)
                 [!provide]                PROVIDE (__end, .)
-                0x20002810                __HeapBase = .
-                0x20002c10                . = (. + HEAP_SIZE)
- *fill*         0x20002810      0x400 
-                0x20002c10                __HeapLimit = .
-                0x20002c10                __heap_limit = .
-                0x20002c10                __heap_end__ = .
+                0x20002808                __HeapBase = .
+                0x20002c08                . = (. + HEAP_SIZE)
+ *fill*         0x20002808      0x400 
+                0x20002c08                __HeapLimit = .
+                0x20002c08                __heap_limit = .
+                0x20002c08                __heap_end__ = .
                 0x20007000                __StackTop = (ORIGIN (m_data_2) + LENGTH (m_data_2))
                 0x20006c00                __StackLimit = (__StackTop - STACK_SIZE)
                 0x20007000                PROVIDE (__stack, __StackTop)
@@ -2039,7 +2026,7 @@ LOAD e:/nxp/s32ds_arm_v2.2/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../
                 0x00000001                ASSERT ((__StackLimit >= __HeapLimit), region m_data_2 overflowed with stack and heap)
 OUTPUT(APP_RTOS.elf elf32-littlearm)
 
-.debug_info     0x00000000    0x2a392
+.debug_info     0x00000000    0x2a427
  .debug_info    0x00000000     0x1475 ./Generated_Code/Flash1.o
  .debug_info    0x00001475     0x15aa ./Generated_Code/clockMan1.o
  .debug_info    0x00002a1f     0x14cf ./Generated_Code/pwrMan1.o
@@ -2057,19 +2044,19 @@ OUTPUT(APP_RTOS.elf elf32-littlearm)
  .debug_info    0x0001500f     0x1aec ./SDK/rtos/FreeRTOS_S32K/Source/timers.o
  .debug_info    0x00016afb      0x56b ./SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/port.o
  .debug_info    0x00017066      0xcb0 ./SDK/rtos/FreeRTOS_S32K/Source/portable/MemMang/heap_4.o
- .debug_info    0x00017d16     0x214b ./Sources/HardwareLib/FlashWriteRead.o
- .debug_info    0x00019e61     0x2395 ./Sources/HardwareLib/LPTMR.o
- .debug_info    0x0001c1f6     0x259c ./Sources/HardwareLib/LPUART.o
- .debug_info    0x0001e792     0x22b3 ./Sources/HardwareLib/LP_IT_timer.o
- .debug_info    0x00020a45      0x12e ./Sources/HardwareLib/OLED_FONT.o
- .debug_info    0x00020b73     0x234c ./Sources/HardwareLib/PowerSwitch.o
- .debug_info    0x00022ebf     0x238b ./Sources/HardwareLib/RGB_LED.o
- .debug_info    0x0002524a      0xe02 ./Sources/HardwareLib/SPI_OLED.o
- .debug_info    0x0002604c      0x22e ./Sources/HardwareLib/latency.o
- .debug_info    0x0002627a     0x237c ./Sources/RTOS_Task.o
- .debug_info    0x000285f6     0x1d9c ./Sources/main.o
+ .debug_info    0x00017d16     0x2130 ./Sources/HardwareLib/FlashWriteRead.o
+ .debug_info    0x00019e46     0x2390 ./Sources/HardwareLib/LPTMR.o
+ .debug_info    0x0001c1d6     0x261c ./Sources/HardwareLib/LPUART.o
+ .debug_info    0x0001e7f2     0x2298 ./Sources/HardwareLib/LP_IT_timer.o
+ .debug_info    0x00020a8a      0x12e ./Sources/HardwareLib/OLED_FONT.o
+ .debug_info    0x00020bb8     0x2370 ./Sources/HardwareLib/PowerSwitch.o
+ .debug_info    0x00022f28     0x2370 ./Sources/HardwareLib/RGB_LED.o
+ .debug_info    0x00025298      0xe02 ./Sources/HardwareLib/SPI_OLED.o
+ .debug_info    0x0002609a      0x22e ./Sources/HardwareLib/latency.o
+ .debug_info    0x000262c8     0x23de ./Sources/RTOS_Task.o
+ .debug_info    0x000286a6     0x1d81 ./Sources/main.o
 
-.debug_abbrev   0x00000000     0x4037
+.debug_abbrev   0x00000000     0x405d
  .debug_abbrev  0x00000000      0x12e ./Generated_Code/Flash1.o
  .debug_abbrev  0x0000012e      0x13b ./Generated_Code/clockMan1.o
  .debug_abbrev  0x00000269      0x139 ./Generated_Code/pwrMan1.o
@@ -2089,15 +2076,15 @@ OUTPUT(APP_RTOS.elf elf32-littlearm)
  .debug_abbrev  0x00002440      0x30d ./SDK/rtos/FreeRTOS_S32K/Source/portable/MemMang/heap_4.o
  .debug_abbrev  0x0000274d      0x28c ./Sources/HardwareLib/FlashWriteRead.o
  .debug_abbrev  0x000029d9      0x2a1 ./Sources/HardwareLib/LPTMR.o
- .debug_abbrev  0x00002c7a      0x369 ./Sources/HardwareLib/LPUART.o
- .debug_abbrev  0x00002fe3      0x290 ./Sources/HardwareLib/LP_IT_timer.o
- .debug_abbrev  0x00003273       0x6f ./Sources/HardwareLib/OLED_FONT.o
- .debug_abbrev  0x000032e2      0x247 ./Sources/HardwareLib/PowerSwitch.o
- .debug_abbrev  0x00003529      0x2ac ./Sources/HardwareLib/RGB_LED.o
- .debug_abbrev  0x000037d5      0x28d ./Sources/HardwareLib/SPI_OLED.o
- .debug_abbrev  0x00003a62      0x12f ./Sources/HardwareLib/latency.o
- .debug_abbrev  0x00003b91      0x298 ./Sources/RTOS_Task.o
- .debug_abbrev  0x00003e29      0x20e ./Sources/main.o
+ .debug_abbrev  0x00002c7a      0x36d ./Sources/HardwareLib/LPUART.o
+ .debug_abbrev  0x00002fe7      0x290 ./Sources/HardwareLib/LP_IT_timer.o
+ .debug_abbrev  0x00003277       0x6f ./Sources/HardwareLib/OLED_FONT.o
+ .debug_abbrev  0x000032e6      0x288 ./Sources/HardwareLib/PowerSwitch.o
+ .debug_abbrev  0x0000356e      0x2ac ./Sources/HardwareLib/RGB_LED.o
+ .debug_abbrev  0x0000381a      0x28d ./Sources/HardwareLib/SPI_OLED.o
+ .debug_abbrev  0x00003aa7      0x12f ./Sources/HardwareLib/latency.o
+ .debug_abbrev  0x00003bd6      0x279 ./Sources/RTOS_Task.o
+ .debug_abbrev  0x00003e4f      0x20e ./Sources/main.o
 
 .debug_aranges  0x00000000      0xbc0
  .debug_aranges
@@ -2157,7 +2144,7 @@ OUTPUT(APP_RTOS.elf elf32-littlearm)
  .debug_aranges
                 0x00000ba0       0x20 ./Sources/main.o
 
-.debug_line     0x00000000     0x984b
+.debug_line     0x00000000     0x9870
  .debug_line    0x00000000      0x3ff ./Generated_Code/Flash1.o
  .debug_line    0x000003ff      0x402 ./Generated_Code/clockMan1.o
  .debug_line    0x00000801      0x400 ./Generated_Code/pwrMan1.o
@@ -2177,17 +2164,17 @@ OUTPUT(APP_RTOS.elf elf32-littlearm)
  .debug_line    0x00005ad0      0x3fd ./SDK/rtos/FreeRTOS_S32K/Source/portable/MemMang/heap_4.o
  .debug_line    0x00005ecd      0x636 ./Sources/HardwareLib/FlashWriteRead.o
  .debug_line    0x00006503      0x5f2 ./Sources/HardwareLib/LPTMR.o
- .debug_line    0x00006af5      0x6f1 ./Sources/HardwareLib/LPUART.o
- .debug_line    0x000071e6      0x5d8 ./Sources/HardwareLib/LP_IT_timer.o
- .debug_line    0x000077be       0x52 ./Sources/HardwareLib/OLED_FONT.o
- .debug_line    0x00007810      0x655 ./Sources/HardwareLib/PowerSwitch.o
- .debug_line    0x00007e65      0x62f ./Sources/HardwareLib/RGB_LED.o
- .debug_line    0x00008494      0x44a ./Sources/HardwareLib/SPI_OLED.o
- .debug_line    0x000088de      0x252 ./Sources/HardwareLib/latency.o
- .debug_line    0x00008b30      0x744 ./Sources/RTOS_Task.o
- .debug_line    0x00009274      0x5d7 ./Sources/main.o
+ .debug_line    0x00006af5      0x70a ./Sources/HardwareLib/LPUART.o
+ .debug_line    0x000071ff      0x5d8 ./Sources/HardwareLib/LP_IT_timer.o
+ .debug_line    0x000077d7       0x52 ./Sources/HardwareLib/OLED_FONT.o
+ .debug_line    0x00007829      0x65c ./Sources/HardwareLib/PowerSwitch.o
+ .debug_line    0x00007e85      0x62f ./Sources/HardwareLib/RGB_LED.o
+ .debug_line    0x000084b4      0x44a ./Sources/HardwareLib/SPI_OLED.o
+ .debug_line    0x000088fe      0x252 ./Sources/HardwareLib/latency.o
+ .debug_line    0x00008b50      0x749 ./Sources/RTOS_Task.o
+ .debug_line    0x00009299      0x5d7 ./Sources/main.o
 
-.debug_str      0x00000000     0x804f
+.debug_str      0x00000000     0x806b
  .debug_str     0x00000000     0x2272 ./Generated_Code/Flash1.o
                                0x2317 (size before relaxing)
  .debug_str     0x00002272      0x4b6 ./Generated_Code/clockMan1.o
@@ -2222,28 +2209,28 @@ OUTPUT(APP_RTOS.elf elf32-littlearm)
                                 0x4e9 (size before relaxing)
  .debug_str     0x0000760c      0x1ce ./SDK/rtos/FreeRTOS_S32K/Source/portable/MemMang/heap_4.o
                                 0x882 (size before relaxing)
- .debug_str     0x000077da       0xe7 ./Sources/HardwareLib/FlashWriteRead.o
-                               0x28cd (size before relaxing)
- .debug_str     0x000078c1      0x11b ./Sources/HardwareLib/LPTMR.o
-                               0x2ec7 (size before relaxing)
- .debug_str     0x000079dc      0x136 ./Sources/HardwareLib/LPUART.o
-                               0x2fd5 (size before relaxing)
- .debug_str     0x00007b12       0x86 ./Sources/HardwareLib/LP_IT_timer.o
-                               0x2e87 (size before relaxing)
- .debug_str     0x00007b98       0x53 ./Sources/HardwareLib/OLED_FONT.o
+ .debug_str     0x000077da       0xeb ./Sources/HardwareLib/FlashWriteRead.o
+                               0x28bd (size before relaxing)
+ .debug_str     0x000078c5      0x11b ./Sources/HardwareLib/LPTMR.o
+                               0x2ecb (size before relaxing)
+ .debug_str     0x000079e0      0x13e ./Sources/HardwareLib/LPUART.o
+                               0x2ffd (size before relaxing)
+ .debug_str     0x00007b1e       0x86 ./Sources/HardwareLib/LP_IT_timer.o
+                               0x2e77 (size before relaxing)
+ .debug_str     0x00007ba4       0x53 ./Sources/HardwareLib/OLED_FONT.o
                                 0x244 (size before relaxing)
- .debug_str     0x00007beb       0xb9 ./Sources/HardwareLib/PowerSwitch.o
-                               0x28fc (size before relaxing)
- .debug_str     0x00007ca4       0x79 ./Sources/HardwareLib/RGB_LED.o
-                               0x2ee2 (size before relaxing)
- .debug_str     0x00007d1d      0x1dc ./Sources/HardwareLib/SPI_OLED.o
+ .debug_str     0x00007bf7       0xc9 ./Sources/HardwareLib/PowerSwitch.o
+                               0x290f (size before relaxing)
+ .debug_str     0x00007cc0       0x79 ./Sources/HardwareLib/RGB_LED.o
+                               0x2ed2 (size before relaxing)
+ .debug_str     0x00007d39      0x1dc ./Sources/HardwareLib/SPI_OLED.o
                                 0x507 (size before relaxing)
- .debug_str     0x00007ef9       0x86 ./Sources/HardwareLib/latency.o
+ .debug_str     0x00007f15       0x86 ./Sources/HardwareLib/latency.o
                                 0x2ae (size before relaxing)
- .debug_str     0x00007f7f       0xaf ./Sources/RTOS_Task.o
-                               0x2a26 (size before relaxing)
- .debug_str     0x0000802e       0x21 ./Sources/main.o
-                               0x27c8 (size before relaxing)
+ .debug_str     0x00007f9b       0xaf ./Sources/RTOS_Task.o
+                               0x2a4a (size before relaxing)
+ .debug_str     0x0000804a       0x21 ./Sources/main.o
+                               0x27b8 (size before relaxing)
 
 .comment        0x00000000       0xa0
  .comment       0x00000000       0xa0 ./Generated_Code/Flash1.o
@@ -2275,7 +2262,7 @@ OUTPUT(APP_RTOS.elf elf32-littlearm)
  .comment       0x000000a0       0xa1 ./Sources/RTOS_Task.o
  .comment       0x000000a0       0xa1 ./Sources/main.o
 
-.debug_loc      0x00000000     0xd6e3
+.debug_loc      0x00000000     0xd7fe
  .debug_loc     0x00000000       0xeb ./SDK/platform/devices/S32K144/startup/system_S32K144.o
  .debug_loc     0x000000eb       0xec ./SDK/platform/devices/startup.o
  .debug_loc     0x000001d7     0x4e0b ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
@@ -2291,13 +2278,13 @@ OUTPUT(APP_RTOS.elf elf32-littlearm)
  .debug_loc     0x0000c0bf      0x3a6 ./SDK/rtos/FreeRTOS_S32K/Source/portable/MemMang/heap_4.o
  .debug_loc     0x0000c465      0x2bb ./Sources/HardwareLib/FlashWriteRead.o
  .debug_loc     0x0000c720       0xd7 ./Sources/HardwareLib/LPTMR.o
- .debug_loc     0x0000c7f7      0x1f2 ./Sources/HardwareLib/LPUART.o
- .debug_loc     0x0000c9e9       0x7f ./Sources/HardwareLib/LP_IT_timer.o
- .debug_loc     0x0000ca68       0x1e ./Sources/HardwareLib/PowerSwitch.o
- .debug_loc     0x0000ca86      0x114 ./Sources/HardwareLib/RGB_LED.o
- .debug_loc     0x0000cb9a      0x9a6 ./Sources/HardwareLib/SPI_OLED.o
- .debug_loc     0x0000d540      0x161 ./Sources/HardwareLib/latency.o
- .debug_loc     0x0000d6a1       0x42 ./Sources/RTOS_Task.o
+ .debug_loc     0x0000c7f7      0x210 ./Sources/HardwareLib/LPUART.o
+ .debug_loc     0x0000ca07       0x7f ./Sources/HardwareLib/LP_IT_timer.o
+ .debug_loc     0x0000ca86      0x110 ./Sources/HardwareLib/PowerSwitch.o
+ .debug_loc     0x0000cb96      0x114 ./Sources/HardwareLib/RGB_LED.o
+ .debug_loc     0x0000ccaa      0x9a6 ./Sources/HardwareLib/SPI_OLED.o
+ .debug_loc     0x0000d650      0x161 ./Sources/HardwareLib/latency.o
+ .debug_loc     0x0000d7b1       0x4d ./Sources/RTOS_Task.o
 
 .debug_ranges   0x00000000     0x10d8
  .debug_ranges  0x00000000       0x20 ./SDK/platform/devices/S32K144/startup/system_S32K144.o
@@ -2324,7 +2311,7 @@ OUTPUT(APP_RTOS.elf elf32-littlearm)
  .debug_ranges  0x00001090       0x38 ./Sources/RTOS_Task.o
  .debug_ranges  0x000010c8       0x10 ./Sources/main.o
 
-.debug_frame    0x00000000     0x2160
+.debug_frame    0x00000000     0x2168
  .debug_frame   0x00000000       0x40 ./SDK/platform/devices/S32K144/startup/system_S32K144.o
  .debug_frame   0x00000040       0x2c ./SDK/platform/devices/startup.o
  .debug_frame   0x0000006c      0x37c ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
@@ -2342,23 +2329,23 @@ OUTPUT(APP_RTOS.elf elf32-littlearm)
  .debug_frame   0x000017d4       0x60 ./Sources/HardwareLib/LPTMR.o
  .debug_frame   0x00001834       0xd0 ./Sources/HardwareLib/LPUART.o
  .debug_frame   0x00001904       0x40 ./Sources/HardwareLib/LP_IT_timer.o
- .debug_frame   0x00001944       0x90 ./Sources/HardwareLib/PowerSwitch.o
- .debug_frame   0x000019d4       0x80 ./Sources/HardwareLib/RGB_LED.o
- .debug_frame   0x00001a54      0x274 ./Sources/HardwareLib/SPI_OLED.o
- .debug_frame   0x00001cc8       0x80 ./Sources/HardwareLib/latency.o
- .debug_frame   0x00001d48       0xb8 ./Sources/RTOS_Task.o
- .debug_frame   0x00001e00       0x28 ./Sources/main.o
- .debug_frame   0x00001e28       0x28 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memcpy-stub.o)
- .debug_frame   0x00001e50       0x20 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memset.o)
- .debug_frame   0x00001e70       0x40 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-vsprintf.o)
- .debug_frame   0x00001eb0       0x90 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-nano-svfprintf.o)
- .debug_frame   0x00001f40       0x60 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-nano-vfprintf_i.o)
- .debug_frame   0x00001fa0       0x28 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memmove.o)
- .debug_frame   0x00001fc8       0x38 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-nano-freer.o)
- .debug_frame   0x00002000       0x2c E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-nano-mallocr.o)
- .debug_frame   0x0000202c       0x3c E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-nano-reallocr.o)
- .debug_frame   0x00002068       0x2c E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-sbrkr.o)
- .debug_frame   0x00002094       0x30 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-mlock.o)
- .debug_frame   0x000020c4       0x20 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-nano-msizer.o)
- .debug_frame   0x000020e4       0x5c E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-reent.o)
- .debug_frame   0x00002140       0x20 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libnosys.a(sbrk.o)
+ .debug_frame   0x00001944       0x98 ./Sources/HardwareLib/PowerSwitch.o
+ .debug_frame   0x000019dc       0x80 ./Sources/HardwareLib/RGB_LED.o
+ .debug_frame   0x00001a5c      0x274 ./Sources/HardwareLib/SPI_OLED.o
+ .debug_frame   0x00001cd0       0x80 ./Sources/HardwareLib/latency.o
+ .debug_frame   0x00001d50       0xb8 ./Sources/RTOS_Task.o
+ .debug_frame   0x00001e08       0x28 ./Sources/main.o
+ .debug_frame   0x00001e30       0x28 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x00001e58       0x20 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memset.o)
+ .debug_frame   0x00001e78       0x40 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-vsprintf.o)
+ .debug_frame   0x00001eb8       0x90 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-nano-svfprintf.o)
+ .debug_frame   0x00001f48       0x60 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .debug_frame   0x00001fa8       0x28 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memmove.o)
+ .debug_frame   0x00001fd0       0x38 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-nano-freer.o)
+ .debug_frame   0x00002008       0x2c E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-nano-mallocr.o)
+ .debug_frame   0x00002034       0x3c E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-nano-reallocr.o)
+ .debug_frame   0x00002070       0x2c E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-sbrkr.o)
+ .debug_frame   0x0000209c       0x30 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-mlock.o)
+ .debug_frame   0x000020cc       0x20 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-nano-msizer.o)
+ .debug_frame   0x000020ec       0x5c E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-reent.o)
+ .debug_frame   0x00002148       0x20 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libnosys.a(sbrk.o)

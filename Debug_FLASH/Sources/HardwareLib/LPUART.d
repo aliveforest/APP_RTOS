@@ -5,7 +5,24 @@ Sources/HardwareLib/LPUART.o: ../Sources/HardwareLib/LPUART.c \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/platform/devices/S32K144/include/S32K144.h \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/platform/devices/S32K144/include/S32K144_features.h \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/platform/devices/devassert.h \
- ../Sources/HardwareLib/LPUART.h ../Sources/HardwareLib/Ymodem.h \
+ ../Sources/HardwareLib/LPUART.h ../Sources/HardwareLib/HardwareLib.h \
+ D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/FreeRTOS.h \
+ D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Generated_Code/FreeRTOSConfig.h \
+ D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/projdefs.h \
+ D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/portable.h \
+ D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/deprecated_definitions.h \
+ D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/portmacro.h \
+ D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/mpu_wrappers.h \
+ D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/task.h \
+ D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/list.h \
+ D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/queue.h \
+ D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/semphr.h \
+ D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/queue.h \
+ D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/timers.h \
+ D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/task.h \
+ ../Sources/HardwareLib/RGB_LED.h ../Sources/HardwareLib/latency.h \
+ ../Sources/HardwareLib/GPIO_init.h ../Sources/HardwareLib/LPTMR.h \
+ ../Sources/HardwareLib/LP_IT_timer.h \
  ../Sources/HardwareLib/FlashWriteRead.h \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Generated_Code/Cpu.h \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/platform/drivers/inc/interrupt_manager.h \
@@ -20,27 +37,9 @@ Sources/HardwareLib/LPUART.o: ../Sources/HardwareLib/LPUART.c \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/platform/drivers/inc/pins_driver.h \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Generated_Code/clockMan1.h \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Generated_Code/Cpu.h \
- D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/FreeRTOS.h \
- D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Generated_Code/FreeRTOSConfig.h \
- D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/projdefs.h \
- D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/portable.h \
- D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/deprecated_definitions.h \
- D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/portmacro.h \
- D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/mpu_wrappers.h \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Generated_Code/Flash1.h \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Generated_Code/pwrMan1.h \
- ../Sources/HardwareLib/HardwareLib.h \
- D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/task.h \
- D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/list.h \
- D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/queue.h \
- D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/semphr.h \
- D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/queue.h \
- D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/timers.h \
- D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/task.h \
- ../Sources/HardwareLib/RGB_LED.h ../Sources/HardwareLib/latency.h \
- ../Sources/HardwareLib/GPIO_init.h ../Sources/HardwareLib/LPTMR.h \
- ../Sources/HardwareLib/LP_IT_timer.h ../Sources/HardwareLib/SPI_OLED.h \
- ../Sources/HardwareLib/PowerSwitch.h
+ ../Sources/HardwareLib/SPI_OLED.h ../Sources/HardwareLib/PowerSwitch.h
 
 D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/platform/devices/S32K144/include/S32K144.h:
 
@@ -56,7 +55,45 @@ D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/platform/devices/devassert.h:
 
 ../Sources/HardwareLib/LPUART.h:
 
-../Sources/HardwareLib/Ymodem.h:
+../Sources/HardwareLib/HardwareLib.h:
+
+D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/FreeRTOS.h:
+
+D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Generated_Code/FreeRTOSConfig.h:
+
+D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/projdefs.h:
+
+D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/portable.h:
+
+D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/deprecated_definitions.h:
+
+D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/portmacro.h:
+
+D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/mpu_wrappers.h:
+
+D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/task.h:
+
+D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/list.h:
+
+D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/queue.h:
+
+D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/semphr.h:
+
+D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/queue.h:
+
+D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/timers.h:
+
+D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/task.h:
+
+../Sources/HardwareLib/RGB_LED.h:
+
+../Sources/HardwareLib/latency.h:
+
+../Sources/HardwareLib/GPIO_init.h:
+
+../Sources/HardwareLib/LPTMR.h:
+
+../Sources/HardwareLib/LP_IT_timer.h:
 
 ../Sources/HardwareLib/FlashWriteRead.h:
 
@@ -86,49 +123,9 @@ D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Generated_Code/clockMan1.h:
 
 D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Generated_Code/Cpu.h:
 
-D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/FreeRTOS.h:
-
-D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Generated_Code/FreeRTOSConfig.h:
-
-D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/projdefs.h:
-
-D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/portable.h:
-
-D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/deprecated_definitions.h:
-
-D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/portmacro.h:
-
-D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/mpu_wrappers.h:
-
 D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Generated_Code/Flash1.h:
 
 D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Generated_Code/pwrMan1.h:
-
-../Sources/HardwareLib/HardwareLib.h:
-
-D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/task.h:
-
-D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/list.h:
-
-D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/queue.h:
-
-D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/semphr.h:
-
-D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/queue.h:
-
-D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/timers.h:
-
-D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/task.h:
-
-../Sources/HardwareLib/RGB_LED.h:
-
-../Sources/HardwareLib/latency.h:
-
-../Sources/HardwareLib/GPIO_init.h:
-
-../Sources/HardwareLib/LPTMR.h:
-
-../Sources/HardwareLib/LP_IT_timer.h:
 
 ../Sources/HardwareLib/SPI_OLED.h:
 

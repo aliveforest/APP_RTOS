@@ -21,11 +21,11 @@ void Power_Man_Init(void){
 }
 
 volatile uint8_t option=0; /* 存储用户选项的变量 */
-uint32_t frequency; /* 用于存储核心频率的变量 */
-status_t retV = STATUS_SUCCESS; /* 用于显示模式变化状态的变量 */
 
 /* 电源模式切换 */
 void Power_Switch(void) {
+	uint32_t frequency; /* 用于存储核心频率的变量 */
+	status_t retV = STATUS_SUCCESS; /* 用于显示模式变化状态的变量 */
 
     LPUART1_printf((const char *)MENU_MESSAGE ADD_MESSAGE); /* 打印菜单 */
 
@@ -126,10 +126,15 @@ void Power_Switch(void) {
 /* 读取用户输入选项 */
 void Read_User_Option(uint8_t * option){
     uint8_t rev = 0;
-    xQueueReceive(LPUART_RX_que, &rev, delay_10);
+    BaseType_t revStat;
+    revStat = xQueueReceive(LPUART_RX_que, &rev, delay_10);
+    if(revStat != pdTRUE) {
+    	*option = '1';
+    	return;
+    }
     if (rev < '0' || rev > '5'){ /* 检查选项是否无效 */
         LPUART1_printf((const char *)"Invalid option!\r\n");
-        *option = 1;
+        *option = '1';
     }else {
         *option = rev;
     }

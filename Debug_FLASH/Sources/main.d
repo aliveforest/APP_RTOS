@@ -38,12 +38,11 @@ Sources/main.o: ../Sources/main.c \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Sources/HardwareLib/RGB_LED.h \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Sources/HardwareLib/latency.h \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Sources/HardwareLib/LPUART.h \
- D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Sources/HardwareLib/Ymodem.h \
- D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Sources/HardwareLib/FlashWriteRead.h \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Sources/HardwareLib/HardwareLib.h \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Sources/HardwareLib/GPIO_init.h \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Sources/HardwareLib/LPTMR.h \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Sources/HardwareLib/LP_IT_timer.h \
+ D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Sources/HardwareLib/FlashWriteRead.h \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Sources/HardwareLib/SPI_OLED.h \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Sources/HardwareLib/PowerSwitch.h
 
@@ -125,10 +124,6 @@ D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Sources/HardwareLib/latency.h:
 
 D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Sources/HardwareLib/LPUART.h:
 
-D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Sources/HardwareLib/Ymodem.h:
-
-D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Sources/HardwareLib/FlashWriteRead.h:
-
 D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Sources/HardwareLib/HardwareLib.h:
 
 D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Sources/HardwareLib/GPIO_init.h:
@@ -136,6 +131,8 @@ D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Sources/HardwareLib/GPIO_init.h:
 D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Sources/HardwareLib/LPTMR.h:
 
 D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Sources/HardwareLib/LP_IT_timer.h:
+
+D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Sources/HardwareLib/FlashWriteRead.h:
 
 D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Sources/HardwareLib/SPI_OLED.h:
 

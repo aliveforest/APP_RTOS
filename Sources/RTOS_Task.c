@@ -106,25 +106,21 @@ void show_task(void){
 	size_t size_left;
     uint8_t rev;
     for (;;){
-//        LPUART1_printf("------APP------\r\n");
-        Power_Switch();
+        LPUART1_printf("------APP------\r\n");
+//        Power_Switch();
 //        size_left = xPortGetFreeHeapSize();
 //        LPUART1_printf("Free Heap Size: %d bytes\r\n", size_left);
         size_left = xPortGetMinimumEverFreeHeapSize();
 //        LPUART1_printf("MinimumEverFreeHeapSize: %d bytes\r\n", size_left);
         SPI_OLED_ShowString(10, y++, "SPI_OLED_task",16,1);
         if(y>=50) {y=0; SPI_OLED_Clear();}
-//        if(REV_FLAG>0) {
-//            for(;;){
-//                xQueueReceive(LPUART_RX_que, &rev, delay_10);
-//                LPUART1_printf("%d", rev);
-//                if(rev=='\n') {
-//                    REV_FLAG--;
-//                    LPUART1_printf("\r\n");
-//                    break;
-//                }
-//            }
-//        }
+		if(xSemaphoreTake(RX_Cnt_Semph, delay_10)==pdTRUE) {
+			for(;;){
+				xQueueReceive(LPUART_RX_que, &rev, delay_10);
+				LPUART1_printf("%c", rev);
+				if(rev=='\n') { LPUART1_printf("\r\n"); break; }
+			}
+		}
         vTaskDelay(300);
     }
 }
@@ -140,11 +136,8 @@ void cpu_task(void){
         LPUART1_printf("TaskName	     Status    Prio  StackLeft TaskNum\r\n");
         LPUART1_printf("%s", CPU_RunInfo);
         LPUART1_printf("-----------------------------------------------------\r\n");
-
         memset(CPU_RunInfo,0,400);				//信息缓冲区清零
-
         vTaskGetRunTimeStats((char *)&CPU_RunInfo);
-
         LPUART1_printf("TaskName	      RunCount     CPU Utilization \r\n");
         LPUART1_printf("%s", CPU_RunInfo);
         LPUART1_printf("-----------------------------------------------------\r\n\n");

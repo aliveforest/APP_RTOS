@@ -7,14 +7,11 @@
 #ifndef LPUART_H_
 #define LPUART_H_
 #include "S32K144.h" 
-#include "Ymodem.h"
-#include "latency.h"
-#include "FreeRTOS.h"
-#include "queue.h"
+#include "HardwareLib.h"
 
 
-extern volatile uint16_t REV_FLAG;
-extern QueueHandle_t LPUART_RX_que;        /* LPUART数据接收句柄 */
+extern QueueHandle_t RX_Cnt_Semph;     /* 信号量句柄 */
+extern QueueHandle_t LPUART_RX_que;    /* LPUART数据接收句柄 */
 extern TickType_t delay_10;
 
 #ifdef YMODEM  /* 如果使用YMODEM协议 */

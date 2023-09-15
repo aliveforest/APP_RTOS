@@ -14,7 +14,9 @@
 #include <stdbool.h>
 
 TickType_t delay_10 = 10ul;
-QueueHandle_t LPUART_RX_que;        /* LPUART数据接收句柄 */
+QueueHandle_t LPUART_RX_que;    /* LPUART数据接收句柄 */
+QueueHandle_t RX_Cnt_Semph;     /* 信号量句柄 */
+
 
 /* Init. summary: 115200 baud, 1 stop bit, 8 bit format, no parity */
 void LPUART1_init(void){
@@ -63,7 +65,8 @@ void LPUART1_init(void){
 
     LPUART_RX_que = xQueueCreate(200, sizeof(uint8_t)); /* LPUART数据队列创建 */
     if(LPUART_RX_que == NULL) LPUART1_printf("LPUART_RX_que created failed\r\n");
-
+    RX_Cnt_Semph = xSemaphoreCreateCounting(20, 0);
+    if(RX_Cnt_Semph == NULL) LPUART1_printf("RX_Cnt_Semph created failed\r\n");
 
 }
 /* 中断配置 */
@@ -117,17 +120,20 @@ uint8_t LPUART1_receive_char(uint8_t * rec, uint32_t timeout) {
 }
 
 #ifndef YMODEM  /* 如果不使用YMODEM协议 */
-volatile uint16_t REV_FLAG=0;
+
 uint8_t rev_c=0;
 /* LPUART1中断接收入队列 */
 void LPUART1_RxTx_IRQHandler(void){
+	BaseType_t revStat;
 	while((LPUART1->STAT & LPUART_STAT_RDRF_MASK)>>LPUART_STAT_RDRF_SHIFT==0){
 		/* Wait for received buffer to be full */
 	}
 	rev_c= LPUART1->DATA;            /* Read received data*/
-	xQueueSendFromISR(LPUART_RX_que, &rev_c, NULL); /* 数据存入队列 */
-	if(rev_c=='\n') {
-		REV_FLAG++;
+	revStat = xQueueSendFromISR(LPUART_RX_que, &rev_c, NULL); /* 数据存入队列 */
+	if(revStat != pdTRUE) LPUART1_printf("LPUART_RX_que Send Failed!\r\n");
+	if(rev_c=='\n') { /* 接收到'\n',即一个字符串 */
+		revStat = xSemaphoreGiveFromISR(RX_Cnt_Semph,NULL); /* 信号量+1 */
+		if(revStat != pdTRUE) LPUART1_printf("RX_Cnt_Semph Give Failed!\r\n");
 	}
 }
 
