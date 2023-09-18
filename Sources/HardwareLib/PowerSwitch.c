@@ -92,7 +92,7 @@ void Power_Switch(void) {
         /* 将电源模式设置为 STOP2 */
         retV = POWER_SYS_SetMode(STOP2, POWER_MANAGER_POLICY_AGREEMENT);
         if (retV == STATUS_SUCCESS) {
-            LPUART1_plrintf((const char*)"CPU was entered STOP2 mode successfully and then woke up to exit STOP2 mode.\r\n");
+            LPUART1_printf((const char*)"CPU was entered STOP2 mode successfully and then woke up to exit STOP2 mode.\r\n");
             LPUART1_printf((const char*)"Current mode is RUN.\r\n");
         	SPI_OLED_PowerOn_Init();
         }else {

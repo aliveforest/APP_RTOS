@@ -18,7 +18,7 @@
 
 extern TickType_t delay_10;
 extern QueueHandle_t LPUART_RX_que;        /* LPUART数据接收句柄 */
-QueueHandle_t semphore_handle;
+QueueHandle_t semaphore_handle;
 void init_fcn(void); /* 外设初始化函数 */
 /***********************************************************************/
 /* RTOS入口函数 */
@@ -83,6 +83,8 @@ void key_task(void){
 //    	LPUART1_printf("key_task\r\n");
         if(SW2_key()){
 			LPUART1_printf("KEY2 press!\r\n");
+			LPUART1_printf("Task Notify Binary Semaphore Release!\r\n");
+			xTaskNotifyGive(show_task_handler); /*  */
 //			LPUART1_printf("DISABLE_INTERRUPTS!\r\n");
 //			taskDISABLE_INTERRUPTS();/*关闭中断*/
 //			LPUART1_printf("Wait 2s !\r\n");
@@ -92,10 +94,10 @@ void key_task(void){
 		}
 		else if(SW3_key()){ /* update APP */
 			LPUART1_printf("KEY3 press!\r\n");
-			later_ms(500);
+//			later_ms(500);
 		}
 
-        vTaskDelay(200);
+        vTaskDelay(20);
     }
 }
 /* show information */
@@ -103,9 +105,15 @@ void show_task(void){
 	uint8_t y=0;
 	size_t size_left;
     uint8_t rev;
+    uint32_t TaskNotify=0;
     for (;;){
         LPUART1_printf("------APP------\r\n");
-//        Power_Switch();
+        TaskNotify = ulTaskNotifyTake(pdTRUE , delay_10);
+		if(TaskNotify>0) {
+			LPUART1_printf("Receive task notify ok, binary semaphore take!\r\n");
+			LPUART1_printf("TaskNotify: %d\r\n", TaskNotify);
+		}
+//        Power_Switch(); /* 进入电源模式切换 */
 //        size_left = xPortGetFreeHeapSize();
 //        LPUART1_printf("Free Heap Size: %d bytes\r\n", size_left);
 //        size_left = xPortGetMinimumEverFreeHeapSize();
