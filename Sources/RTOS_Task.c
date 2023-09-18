@@ -18,13 +18,11 @@
 
 extern TickType_t delay_10;
 extern QueueHandle_t LPUART_RX_que;        /* LPUART数据接收句柄 */
-
+QueueHandle_t semphore_handle;
 void init_fcn(void); /* 外设初始化函数 */
 /***********************************************************************/
 /* RTOS入口函数 */
 void rtos_start(void){
-
-
 	init_fcn(); /* 外设初始化函数 */
 
 	xTaskCreate( (TaskFunction_t        ) start_task,
@@ -42,7 +40,6 @@ void init_fcn(void){
 
     CLOCK_DRV_Init(&clockMan1_InitConfig0);             /* Initialize clock     */
     PMC->REGSC |= 0x03;    /*设置 CLKBIASDIS（时钟偏置禁用位）和 BIASEN（偏置启用位），以便在 VLPR/S 模式下进一步降低功耗*/
-
 	systick_later_init();                               /* Initialize later fcn */
 	LPUART1_init();                        				/* Initialize LPUART1   */
 	RGB_LED_KEY_init();                                 /* Initialize LED KEY   */
@@ -97,6 +94,7 @@ void key_task(void){
 			LPUART1_printf("KEY3 press!\r\n");
 			later_ms(500);
 		}
+
         vTaskDelay(200);
     }
 }
@@ -110,7 +108,7 @@ void show_task(void){
 //        Power_Switch();
 //        size_left = xPortGetFreeHeapSize();
 //        LPUART1_printf("Free Heap Size: %d bytes\r\n", size_left);
-        size_left = xPortGetMinimumEverFreeHeapSize();
+//        size_left = xPortGetMinimumEverFreeHeapSize();
 //        LPUART1_printf("MinimumEverFreeHeapSize: %d bytes\r\n", size_left);
         SPI_OLED_ShowString(10, y++, "SPI_OLED_task",16,1);
         if(y>=50) {y=0; SPI_OLED_Clear();}
@@ -129,9 +127,7 @@ void cpu_task(void){
     uint8_t CPU_RunInfo[400];		//保存任务运行时间信息
     for (;;) {
         memset(CPU_RunInfo,0,400);				//信息缓冲区清零
-
         vTaskList((char *)&CPU_RunInfo);  //获取任务运行时间信息
-
         LPUART1_printf("-----------------------------------------------------\r\n");
         LPUART1_printf("TaskName	     Status    Prio  StackLeft TaskNum\r\n");
         LPUART1_printf("%s", CPU_RunInfo);
@@ -141,7 +137,7 @@ void cpu_task(void){
         LPUART1_printf("TaskName	      RunCount     CPU Utilization \r\n");
         LPUART1_printf("%s", CPU_RunInfo);
         LPUART1_printf("-----------------------------------------------------\r\n\n");
-//        later_ms(500);
+        later_ms(500);
         vTaskDelay(1000);   /* 延时 */
     }
 }

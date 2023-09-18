@@ -43,7 +43,7 @@ void show_task(void);
 /* CPU_TASK 任务配置
  * 包含：任务句柄、任务优先级、堆栈大小、创建任务 */
 TaskHandle_t cpu_task_handler;
-#define CPU_TASK_PRIO           (3u)
+#define CPU_TASK_PRIO           (4u)
 #define CPU_TASK_STACK_SIZE     (512u)
 void cpu_task(void);
 
