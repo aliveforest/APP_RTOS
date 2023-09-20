@@ -6,6 +6,7 @@
         "lpuart.h": "c",
         "s32k144.h": "c",
         "powerswitch.h": "c",
-        "rgb_led.h": "c"
+        "rgb_led.h": "c",
+        "flash1.h": "c"
     }
 }

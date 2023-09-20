@@ -122,8 +122,8 @@ void show_task(void){
     	LPUART1_printf("TOTAL_HEAP:%d\r\n", configTOTAL_HEAP_SIZE);
         size_left = xPortGetFreeHeapSize();
         LPUART1_printf("Free Heap: %d bytes\r\n", size_left);
-//        size_left = xPortGetMinimumEverFreeHeapSize();
-//        LPUART1_printf("MinimumEverFreeHeapSize: %d bytes\r\n", size_left);
+        size_left = xPortGetMinimumEverFreeHeapSize();
+        LPUART1_printf("MinimumEverFreeHeapSize: %d bytes\r\n", size_left);
         SPI_OLED_ShowString(10, y++, "SPI_OLED_task",16,1);
         if(y>=50) {y=0; SPI_OLED_Clear();}
 		if(xSemaphoreTake(RX_Cnt_Semph, delay_10)==pdTRUE) {
