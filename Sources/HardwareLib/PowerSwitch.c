@@ -158,4 +158,5 @@ void Peripheral_IO_Level_Ctrl(void){
     SPI_OLED_Clear();
     PTA->PCOR |= ((1<<17)|(1<<11)); // 输出低
     PTD->PCOR |= ((1 << 3)|(1 << 5)|(1 << 12)|(1 << 11)|(1 << 10)); // 输出低电平
+
 }

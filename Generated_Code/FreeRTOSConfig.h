@@ -7,7 +7,7 @@
 **     Version     : Component SDK_S32K1xx_15, Driver 01.00, CPU db: 3.00.000
 **     Repository  : SDK_S32K1xx_15
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2023-09-21, 10:10, # CodeGen: 19
+**     Date/Time   : 2023-09-21, 15:20, # CodeGen: 22
 **     Contents    :
 **         xCoRoutineCreate               - BaseType_t xCoRoutineCreate( crCOROUTINE_CODE pxCoRoutineCode, UBaseType_t...
 **         crDELAY                        - #define crDELAY( xHandle, xTicksToDelay );
@@ -243,7 +243,12 @@ extern volatile uint32_t CPU_RunTime;
 #define configASSERT(x)                          if((x)==0) { taskDISABLE_INTERRUPTS(); for( ;; ); }   
 
 /* Tickless Idle Mode */
-#define configUSE_TICKLESS_IDLE                  0
+extern void Pre_Sleep_Processing(void);
+extern void Post_Sleep_Processing(void);
+#define configUSE_TICKLESS_IDLE                  1
+#define configEXPECTED_IDLE_TIME_BEFORE_SLEEP    2
+#define configPRE_SLEEP_PROCESSING(x)             Pre_Sleep_Processing() /* Before Enter Sleep Do Something*/
+#define configPOST_SLEEP_PROCESSING(x)            Post_Sleep_Processing() /* Do Something Before Leave Sleep */
 
 /* Additional settings can be defined in the property Settings > User settings > Definitions of the FreeRTOS component */
 

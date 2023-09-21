@@ -3,7 +3,7 @@
   <Header>
     <Name>APP_RTOS</Name>
     <SavedBy>dengtongbei</SavedBy>
-    <ModificationStamp>18</ModificationStamp>
+    <ModificationStamp>20</ModificationStamp>
     <Date>2023-09-08</Date>
     <IDE>Eclipse IDE</IDE>
     <PEversion>1.12.2.RT7_b1743-0713</PEversion>
@@ -14951,7 +14951,7 @@
         <ItemSymbol>ProjectComponentsCountChanged</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
-        <Value>2</Value>
+        <Value>0</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>ModuleName_ADC</ItemSymbol>
@@ -15953,8 +15953,8 @@
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <Value>false</Value>
-        <Expanded>false</Expanded>
+        <Value>true</Value>
+        <Expanded>true</Expanded>
       </ItemState>
       <ItemState>
         <ItemSymbol>configEXPECTED_IDLE_TIME_BEFORE_SLEEP</ItemSymbol>
@@ -15970,7 +15970,7 @@
         <UserReadOnly>false</UserReadOnly>
         <Value>(string list)</Value>
         <StrgList lines_count="1">
-          <Line>/* nothing */</Line>
+          <Line>Pre_Sleep_Processing() /* Before Enter Sleep Do Something*/</Line>
         </StrgList>
       </ItemState>
       <ItemState>
@@ -15979,7 +15979,7 @@
         <UserReadOnly>false</UserReadOnly>
         <Value>(string list)</Value>
         <StrgList lines_count="1">
-          <Line>/* nothing */</Line>
+          <Line>Post_Sleep_Processing() /* Do Something Before Leave Sleep */</Line>
         </StrgList>
       </ItemState>
       <ItemState>

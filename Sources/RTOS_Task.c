@@ -41,14 +41,12 @@ void rtos_start(void){
     if(eventgroup_handle != NULL) {
     	LPUART1_printf("Event Group Created OK!!\r\n");
     }
-	/* 单次定时器 */
-	timer1_handle = xTimerCreate( "timer1",
+	timer1_handle = xTimerCreate( "timer1", /* 单次定时器 */
 									500,
 									pdFALSE,
 									(void *)1,
 									timer1_callback );
-	/* 周期定时器 */
-	timer2_handle = xTimerCreate( "timer2",
+	timer2_handle = xTimerCreate( "timer2", /* 周期定时器 */
 									2000,
 									pdTRUE,
 									(void *)2,
@@ -206,5 +204,26 @@ void timer2_callback( TimerHandle_t pxTimer ){
     static uint32_t timer = 0;
     LPUART1_printf("Run times of timer2: %d\r\n",++timer);
 }
+/* 进入低功耗前所需要执行的操作 */
+void Pre_Sleep_Processing(void) {
+	PCC-> PCCn[PCC_PORTD_INDEX] &= ~PCC_PCCn_CGC_MASK;/* Close clock for PORTD */
+	PCC-> PCCn[PCC_PORTC_INDEX] &= ~PCC_PCCn_CGC_MASK;/* Close clock for PORTC */
+	PCC-> PCCn[PCC_PORTA_INDEX] &= ~PCC_PCCn_CGC_MASK;/* Close clock for PORTA */
+	PCC->PCCn[PCC_LPUART1_INDEX]&= ~PCC_PCCn_CGC_MASK;/* Enable clock for LPUART1 */
+	PCC->PCCn[PCC_LPTMR0_INDEX] &= ~PCC_PCCn_CGC_MASK; /* 关闭LPTMR0时钟	*/
+	PCC->PCCn[PCC_LPIT_INDEX]   &= ~PCC_PCCn_CGC_MASK;  /* 关闭时钟至 LPIT0 寄存器*/
+
+}
+/* 退出低功耗后所需要执行的操作 */
+void Post_Sleep_Processing(void) {
+	PCC-> PCCn[PCC_PORTD_INDEX] |= PCC_PCCn_CGC_MASK;/* Enable clock for PORTD */
+	PCC-> PCCn[PCC_PORTC_INDEX] |= PCC_PCCn_CGC_MASK;/* Enable clock for PORTC */
+	PCC-> PCCn[PCC_PORTA_INDEX] |= PCC_PCCn_CGC_MASK;/* Enable clock for PORTA */
+	PCC->PCCn[PCC_LPUART1_INDEX]|= PCC_PCCn_CGC_MASK;/* Enable clock for LPUART1 */
+	PCC->PCCn[PCC_LPTMR0_INDEX] |= PCC_PCCn_CGC_MASK; /* 使能LPTMR0时钟	*/
+	PCC->PCCn[PCC_LPIT_INDEX]   |= PCC_PCCn_CGC_MASK;  /* 使能时钟至 LPIT0 寄存器*/
+}
+
+
 
 

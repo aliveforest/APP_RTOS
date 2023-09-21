@@ -51,5 +51,7 @@ void cpu_task(void);
 
 void init_fcn(void); /* 外设初始化函数 */
 void rtos_start(void);
+void Pre_Sleep_Processing(void);
+void Post_Sleep_Processing(void);
 
 #endif /* RTOS_TASK_H_ */

@@ -14,7 +14,7 @@ void LPTMR_init(void)
 {
 	PTD->PDDR |= 1<<1;
 	PORTD->PCR[1] = PORT_PCR_MUX(1);
-	PCC->PCCn[PCC_LPTMR0_INDEX] = PCC_PCCn_CGC_MASK; 	/* 时钟	*/
+	PCC->PCCn[PCC_LPTMR0_INDEX] |= PCC_PCCn_CGC_MASK; 	/* 时钟	*/
 //    PCC->PCCn[PCC_LPTMR0_INDEX] &= ~PCC_PCCn_CGC_MASK; 	/* 时钟	*/
 //    PCC->PCCn[PCC_LPTMR0_INDEX] |= PCC_PCCn_PCS(0b01)	/* Clock Src=1, 8MHz SOSCDIV2_CLK */
 //                                |  PCC_PCCn_PCD(0)	/* 外设时钟分频器选择 0~7: 1~8*/
