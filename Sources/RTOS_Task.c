@@ -11,6 +11,7 @@
 #include "queue.h"
 #include "semphr.h"
 #include "timers.h"
+#include "event_groups.h"
 
 /* SDKincludes. */
 #include "Cpu.h"
@@ -23,11 +24,35 @@ void init_fcn(void); /* 外设初始化函数 */
 
 uint8_t *buf = NULL;
 size_t free_size = 0;
+/* 事件标志组 */
+EventGroupHandle_t  eventgroup_handle;
+#define EVENTBIT_0  (1 << 0)
+#define EVENTBIT_1  (1 << 1)
+/* 软件定时器 */
+TimerHandle_t timer1_handle = 0;    /* 单次定时器 */
+TimerHandle_t timer2_handle = 0;    /* 周期定时器 */
+void timer1_callback( TimerHandle_t pxTimer );
+void timer2_callback( TimerHandle_t pxTimer );
 /***********************************************************************/
 /* RTOS入口函数 */
 void rtos_start(void){
 	init_fcn(); /* 外设初始化函数 */
-
+    eventgroup_handle = xEventGroupCreate();
+    if(eventgroup_handle != NULL) {
+    	LPUART1_printf("Event Group Created OK!!\r\n");
+    }
+	/* 单次定时器 */
+	timer1_handle = xTimerCreate( "timer1",
+									500,
+									pdFALSE,
+									(void *)1,
+									timer1_callback );
+	/* 周期定时器 */
+	timer2_handle = xTimerCreate( "timer2",
+									2000,
+									pdTRUE,
+									(void *)2,
+									timer2_callback );
 	xTaskCreate( (TaskFunction_t        ) start_task,
                  (const char *          ) "start_task",
                  (configSTACK_DEPTH_TYPE) START_TASK_STACK_SIZE,
@@ -89,6 +114,10 @@ void key_task(void){
 			LPUART1_printf("KEY2 press!\r\n");
 			LPUART1_printf("Task Notify Binary Semaphore Release!\r\n");
 			xTaskNotifyGive(show_task_handler);
+			xEventGroupSetBits( eventgroup_handle, EVENTBIT_0); /* 将事件标志组的bit0位置1 */
+			LPUART1_printf("TimerStart!\r\n");
+			xTimerStart(timer1_handle,portMAX_DELAY);
+			xTimerStart(timer2_handle,portMAX_DELAY);
 
 //			LPUART1_printf("DISABLE_INTERRUPTS!\r\n");
 //			taskDISABLE_INTERRUPTS();/*关闭中断*/
@@ -99,6 +128,10 @@ void key_task(void){
 		}
 		else if(SW3_key()){
 			LPUART1_printf("KEY3 press!\r\n");
+			xEventGroupSetBits( eventgroup_handle, EVENTBIT_1); /* 将事件标志组的bit1位置1 */
+			LPUART1_printf("TimerStop!\r\n");
+			xTimerStop(timer1_handle,portMAX_DELAY);
+			xTimerStop(timer2_handle,portMAX_DELAY);
 //			later_ms(500);
 		}
 
@@ -111,6 +144,7 @@ void show_task(void){
 	size_t size_left;
     uint8_t rev;
     uint32_t TaskNotify=0;
+    EventBits_t event_bit = 0;
     for (;;){
         LPUART1_printf("------APP------\r\n");
         TaskNotify = ulTaskNotifyTake(pdTRUE , delay_10);
@@ -124,6 +158,12 @@ void show_task(void){
         LPUART1_printf("Free Heap: %d bytes\r\n", size_left);
         size_left = xPortGetMinimumEverFreeHeapSize();
         LPUART1_printf("MinimumEverFreeHeapSize: %d bytes\r\n", size_left);
+        event_bit = xEventGroupWaitBits( eventgroup_handle,         /* 事件标志组句柄 */
+                                           EVENTBIT_0 | EVENTBIT_1,   /* 等待事件标志组的bit0和bit1位 */
+                                           pdTRUE,                    /* 成功等待到事件标志位后，清除事件标志组中的bit0和bit1位 */
+                                           pdTRUE,                    /* 等待事件标志组的bit0和bit1位都置1,就成立 */
+										   delay_10);			  /* 死等 */
+        LPUART1_printf("Value of the wait-to event bit is: %#x\r\n",event_bit);
         SPI_OLED_ShowString(10, y++, "SPI_OLED_task",16,1);
         if(y>=50) {y=0; SPI_OLED_Clear();}
 		if(xSemaphoreTake(RX_Cnt_Semph, delay_10)==pdTRUE) {
@@ -155,4 +195,16 @@ void cpu_task(void){
         vTaskDelay(1000);   /* 延时 */
     }
 }
+/* timer1的超时回调函数 */
+void timer1_callback( TimerHandle_t pxTimer ){
+    static uint32_t timer = 0;
+    LPUART1_printf("Run times of timer1: %d\r\n",++timer);
+}
+
+/* timer2的超时回调函数 */
+void timer2_callback( TimerHandle_t pxTimer ){
+    static uint32_t timer = 0;
+    LPUART1_printf("Run times of timer2: %d\r\n",++timer);
+}
+
 

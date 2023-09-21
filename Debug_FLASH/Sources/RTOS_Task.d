@@ -13,6 +13,8 @@ Sources/RTOS_Task.o: ../Sources/RTOS_Task.c ../Sources/RTOS_Task.h \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/queue.h \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/timers.h \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/task.h \
+ D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/event_groups.h \
+ D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/timers.h \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Generated_Code/Cpu.h \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/platform/devices/device_registers.h \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/platform/devices/common/s32_core_cm4.h \
@@ -75,6 +77,10 @@ D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/inc
 D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/timers.h:
 
 D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/task.h:
+
+D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/event_groups.h:
+
+D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/timers.h:
 
 D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Generated_Code/Cpu.h:
 

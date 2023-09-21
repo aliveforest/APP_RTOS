@@ -35,6 +35,8 @@ Sources/main.o: ../Sources/main.c \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/queue.h \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/timers.h \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/task.h \
+ D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/event_groups.h \
+ D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/timers.h \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Sources/HardwareLib/RGB_LED.h \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Sources/HardwareLib/latency.h \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Sources/HardwareLib/LPUART.h \
@@ -117,6 +119,10 @@ D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/inc
 D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/timers.h:
 
 D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/task.h:
+
+D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/event_groups.h:
+
+D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/FreeRTOS_S32K/Source/include/timers.h:
 
 D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Sources/HardwareLib/RGB_LED.h:
 

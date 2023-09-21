@@ -21,6 +21,7 @@
 #include "queue.h"
 #include "semphr.h"
 #include "timers.h"
+#include "event_groups.h"
 /* User includes. */
 #include "RGB_LED.h"
 #include "latency.h"
