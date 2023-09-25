@@ -1866,7 +1866,7 @@ LOAD e:/nxp/s32ds_arm_v2.2/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../
                 0x2000021c       0x14 ./SDK/rtos/FreeRTOS_S32K/Source/timers.o
  .bss.xActiveTimerList2
                 0x20000230       0x14 ./SDK/rtos/FreeRTOS_S32K/Source/timers.o
- .bss.xLastTime.6403
+ .bss.xLastTime.6399
                 0x20000244        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/timers.o
  .bss.xTimerQueue
                 0x20000248        0x4 ./SDK/rtos/FreeRTOS_S32K/Source/timers.o
@@ -1925,9 +1925,9 @@ LOAD e:/nxp/s32ds_arm_v2.2/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../
  .bss.start_task_handler
                 0x200027fc        0x4 ./Sources/RTOS_Task.o
                 0x200027fc                start_task_handler
- .bss.timer.9141
+ .bss.timer.9137
                 0x20002800        0x4 ./Sources/RTOS_Task.o
- .bss.timer.9145
+ .bss.timer.9141
                 0x20002804        0x4 ./Sources/RTOS_Task.o
  .bss.timer1_handle
                 0x20002808        0x4 ./Sources/RTOS_Task.o
@@ -2080,7 +2080,7 @@ LOAD e:/nxp/s32ds_arm_v2.2/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../
                 0x00000001                ASSERT ((__StackLimit >= __HeapLimit), region m_data_2 overflowed with stack and heap)
 OUTPUT(APP_RTOS.elf elf32-littlearm)
 
-.debug_info     0x00000000    0x2bfc8
+.debug_info     0x00000000    0x2bffc
  .debug_info    0x00000000     0x1475 ./Generated_Code/Flash1.o
  .debug_info    0x00001475     0x15aa ./Generated_Code/clockMan1.o
  .debug_info    0x00002a1f     0x14cf ./Generated_Code/pwrMan1.o
@@ -2097,21 +2097,21 @@ OUTPUT(APP_RTOS.elf elf32-littlearm)
  .debug_info    0x000106e3     0x26e4 ./SDK/rtos/FreeRTOS_S32K/Source/queue.o
  .debug_info    0x00012dc7     0x387e ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
  .debug_info    0x00016645     0x1aec ./SDK/rtos/FreeRTOS_S32K/Source/timers.o
- .debug_info    0x00018131      0x69b ./SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/port.o
- .debug_info    0x000187cc      0xcb0 ./SDK/rtos/FreeRTOS_S32K/Source/portable/MemMang/heap_4.o
- .debug_info    0x0001947c     0x2130 ./Sources/HardwareLib/FlashWriteRead.o
- .debug_info    0x0001b5ac     0x2390 ./Sources/HardwareLib/LPTMR.o
- .debug_info    0x0001d93c     0x261c ./Sources/HardwareLib/LPUART.o
- .debug_info    0x0001ff58     0x2298 ./Sources/HardwareLib/LP_IT_timer.o
- .debug_info    0x000221f0      0x12e ./Sources/HardwareLib/OLED_FONT.o
- .debug_info    0x0002231e     0x2346 ./Sources/HardwareLib/PowerSwitch.o
- .debug_info    0x00024664     0x2370 ./Sources/HardwareLib/RGB_LED.o
- .debug_info    0x000269d4      0xe02 ./Sources/HardwareLib/SPI_OLED.o
- .debug_info    0x000277d6      0x22e ./Sources/HardwareLib/latency.o
- .debug_info    0x00027a04     0x2843 ./Sources/RTOS_Task.o
- .debug_info    0x0002a247     0x1d81 ./Sources/main.o
+ .debug_info    0x00018131      0x6cf ./SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/port.o
+ .debug_info    0x00018800      0xcb0 ./SDK/rtos/FreeRTOS_S32K/Source/portable/MemMang/heap_4.o
+ .debug_info    0x000194b0     0x2130 ./Sources/HardwareLib/FlashWriteRead.o
+ .debug_info    0x0001b5e0     0x2390 ./Sources/HardwareLib/LPTMR.o
+ .debug_info    0x0001d970     0x261c ./Sources/HardwareLib/LPUART.o
+ .debug_info    0x0001ff8c     0x2298 ./Sources/HardwareLib/LP_IT_timer.o
+ .debug_info    0x00022224      0x12e ./Sources/HardwareLib/OLED_FONT.o
+ .debug_info    0x00022352     0x2346 ./Sources/HardwareLib/PowerSwitch.o
+ .debug_info    0x00024698     0x2370 ./Sources/HardwareLib/RGB_LED.o
+ .debug_info    0x00026a08      0xe02 ./Sources/HardwareLib/SPI_OLED.o
+ .debug_info    0x0002780a      0x22e ./Sources/HardwareLib/latency.o
+ .debug_info    0x00027a38     0x2843 ./Sources/RTOS_Task.o
+ .debug_info    0x0002a27b     0x1d81 ./Sources/main.o
 
-.debug_abbrev   0x00000000     0x4413
+.debug_abbrev   0x00000000     0x441a
  .debug_abbrev  0x00000000      0x12e ./Generated_Code/Flash1.o
  .debug_abbrev  0x0000012e      0x13b ./Generated_Code/clockMan1.o
  .debug_abbrev  0x00000269      0x139 ./Generated_Code/pwrMan1.o
@@ -2128,19 +2128,19 @@ OUTPUT(APP_RTOS.elf elf32-littlearm)
  .debug_abbrev  0x00001a21      0x3a0 ./SDK/rtos/FreeRTOS_S32K/Source/queue.o
  .debug_abbrev  0x00001dc1      0x3f1 ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
  .debug_abbrev  0x000021b2      0x397 ./SDK/rtos/FreeRTOS_S32K/Source/timers.o
- .debug_abbrev  0x00002549      0x289 ./SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/port.o
- .debug_abbrev  0x000027d2      0x30d ./SDK/rtos/FreeRTOS_S32K/Source/portable/MemMang/heap_4.o
- .debug_abbrev  0x00002adf      0x28c ./Sources/HardwareLib/FlashWriteRead.o
- .debug_abbrev  0x00002d6b      0x2a1 ./Sources/HardwareLib/LPTMR.o
- .debug_abbrev  0x0000300c      0x36d ./Sources/HardwareLib/LPUART.o
- .debug_abbrev  0x00003379      0x290 ./Sources/HardwareLib/LP_IT_timer.o
- .debug_abbrev  0x00003609       0x6f ./Sources/HardwareLib/OLED_FONT.o
- .debug_abbrev  0x00003678      0x265 ./Sources/HardwareLib/PowerSwitch.o
- .debug_abbrev  0x000038dd      0x2ac ./Sources/HardwareLib/RGB_LED.o
- .debug_abbrev  0x00003b89      0x28d ./Sources/HardwareLib/SPI_OLED.o
- .debug_abbrev  0x00003e16      0x12f ./Sources/HardwareLib/latency.o
- .debug_abbrev  0x00003f45      0x2c0 ./Sources/RTOS_Task.o
- .debug_abbrev  0x00004205      0x20e ./Sources/main.o
+ .debug_abbrev  0x00002549      0x290 ./SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/port.o
+ .debug_abbrev  0x000027d9      0x30d ./SDK/rtos/FreeRTOS_S32K/Source/portable/MemMang/heap_4.o
+ .debug_abbrev  0x00002ae6      0x28c ./Sources/HardwareLib/FlashWriteRead.o
+ .debug_abbrev  0x00002d72      0x2a1 ./Sources/HardwareLib/LPTMR.o
+ .debug_abbrev  0x00003013      0x36d ./Sources/HardwareLib/LPUART.o
+ .debug_abbrev  0x00003380      0x290 ./Sources/HardwareLib/LP_IT_timer.o
+ .debug_abbrev  0x00003610       0x6f ./Sources/HardwareLib/OLED_FONT.o
+ .debug_abbrev  0x0000367f      0x265 ./Sources/HardwareLib/PowerSwitch.o
+ .debug_abbrev  0x000038e4      0x2ac ./Sources/HardwareLib/RGB_LED.o
+ .debug_abbrev  0x00003b90      0x28d ./Sources/HardwareLib/SPI_OLED.o
+ .debug_abbrev  0x00003e1d      0x12f ./Sources/HardwareLib/latency.o
+ .debug_abbrev  0x00003f4c      0x2c0 ./Sources/RTOS_Task.o
+ .debug_abbrev  0x0000420c      0x20e ./Sources/main.o
 
 .debug_aranges  0x00000000      0xc80
  .debug_aranges

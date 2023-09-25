@@ -18,12 +18,12 @@ void RGB_LED_KEY_init(void){
 	/* Configure port C12 as GPIO input (BTN 0 [SW2] on EVB) */
 	PTC->PDDR &= ~(1<<SW2);   /* Port C12: Data Direction= input (default) */
 	PORTC->PCR[SW2] = PORT_PCR_MUX(1) |PORT_PCR_PFE_MASK  /* Port C12: MUX = GPIO, input filter enabled */
-									  | PORT_PCR_IRQC(0x0B); /* 上升沿中断0x09 下降沿中断0x0A */
+									  | PORT_PCR_IRQC(0x09); /* 上升沿中断0x09 下降沿中断0x0A */
 	
 	/* Configure port C13 as GPIO input (BTN 1 [SW3] on EVB) */
 	PTC->PDDR &= ~(1<<SW3);   /* Port C12: Data Direction= input (default) */
 	PORTC->PCR[SW3] = PORT_PCR_MUX(1) |PORT_PCR_PFE_MASK  /* Port C12: MUX = GPIO, input filter enabled */
-									  | PORT_PCR_IRQC(0x0B); /* 上升沿中断0x09 下降沿中断0x0A */
+									  | PORT_PCR_IRQC(0x09); /* 上升沿中断0x09 下降沿中断0x0A */
 	KEY_NVIC_EnableIRQ(PORTC_IRQn, 0x07); /* 使能中断，并设置优先级 */
 
 	/* Configure port D0 as GPIO output (LED on EVB) */

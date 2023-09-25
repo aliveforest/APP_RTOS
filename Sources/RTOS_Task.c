@@ -47,7 +47,7 @@ void rtos_start(void){
 									(void *)1,
 									timer1_callback );
 	timer2_handle = xTimerCreate( "timer2", /* 周期定时器 */
-									2000,
+									1000,
 									pdTRUE,
 									(void *)2,
 									timer2_callback );
