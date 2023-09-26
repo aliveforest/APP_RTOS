@@ -7,7 +7,7 @@
 **     Version     : Component 01.197, Driver 01.00, CPU db: 3.00.000
 **     Datasheet   : S32K14XRM Rev. 2, 02/2017
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2023-09-13, 14:31, # CodeGen: 11
+**     Date/Time   : 2023-09-25, 14:33, # CodeGen: 25
 **     Abstract    :
 **
 **     Settings    :
@@ -61,6 +61,7 @@
 #include "clock.h"
 #include "flash_driver.h"
 #include "power_manager.h"
+#include "osif.h"
 #include "system_S32K144.h"
 
 /* Including needed modules to compile this module/procedure */

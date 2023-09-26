@@ -35,6 +35,7 @@ SDK/platform/drivers/src/power \
 SDK/rtos/FreeRTOS_S32K/Source \
 SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F \
 SDK/rtos/FreeRTOS_S32K/Source/portable/MemMang \
+SDK/rtos/osif \
 Sources/HardwareLib \
 Sources \
 

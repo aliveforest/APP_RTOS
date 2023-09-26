@@ -36,6 +36,7 @@
 "./SDK/rtos/FreeRTOS_S32K/Source/timers.o"
 "./SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/port.o"
 "./SDK/rtos/FreeRTOS_S32K/Source/portable/MemMang/heap_4.o"
+"./SDK/rtos/osif/osif_freertos.o"
 "./Sources/HardwareLib/FlashWriteRead.o"
 "./Sources/HardwareLib/GPIO_init.o"
 "./Sources/HardwareLib/LPTMR.o"

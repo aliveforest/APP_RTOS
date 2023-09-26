@@ -10,6 +10,7 @@ RM := rm -rf
 -include sources.mk
 -include Sources/HardwareLib/subdir.mk
 -include Sources/subdir.mk
+-include SDK/rtos/osif/subdir.mk
 -include SDK/rtos/FreeRTOS_S32K/Source/portable/MemMang/subdir.mk
 -include SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/subdir.mk
 -include SDK/rtos/FreeRTOS_S32K/Source/subdir.mk

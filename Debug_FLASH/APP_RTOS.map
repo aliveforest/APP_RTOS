@@ -1,5 +1,11 @@
 Archive member included to satisfy reference by file (symbol)
 
+e:/nxp/s32ds_arm_v2.2/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_aeabi_uldivmod.o)
+                              ./SDK/rtos/osif/osif_freertos.o (__aeabi_uldivmod)
+e:/nxp/s32ds_arm_v2.2/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_udivmoddi4.o)
+                              e:/nxp/s32ds_arm_v2.2/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_aeabi_uldivmod.o) (__udivmoddi4)
+e:/nxp/s32ds_arm_v2.2/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_dvmd_tls.o)
+                              e:/nxp/s32ds_arm_v2.2/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_aeabi_uldivmod.o) (__aeabi_ldiv0)
 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-exit.o)
                               E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o (exit)
 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-impure.o)
@@ -664,6 +670,41 @@ Discarded input sections
  .bss           0x00000000        0x0 ./SDK/rtos/FreeRTOS_S32K/Source/portable/MemMang/heap_4.o
  .text.vPortInitialiseBlocks
                 0x00000000        0x2 ./SDK/rtos/FreeRTOS_S32K/Source/portable/MemMang/heap_4.o
+ .text          0x00000000        0x0 ./SDK/rtos/osif/osif_freertos.o
+ .data          0x00000000        0x0 ./SDK/rtos/osif/osif_freertos.o
+ .bss           0x00000000        0x0 ./SDK/rtos/osif/osif_freertos.o
+ .text.OSIF_TimeDelay
+                0x00000000       0x1c ./SDK/rtos/osif/osif_freertos.o
+ .text.OSIF_GetMilliseconds
+                0x00000000       0x3a ./SDK/rtos/osif/osif_freertos.o
+ .text.OSIF_MutexLock
+                0x00000000       0x50 ./SDK/rtos/osif/osif_freertos.o
+ .text.OSIF_MutexUnlock
+                0x00000000       0x34 ./SDK/rtos/osif/osif_freertos.o
+ .text.OSIF_MutexCreate
+                0x00000000       0x1a ./SDK/rtos/osif/osif_freertos.o
+ .text.OSIF_MutexDestroy
+                0x00000000       0x12 ./SDK/rtos/osif/osif_freertos.o
+ .text.OSIF_SemaWait
+                0x00000000       0x34 ./SDK/rtos/osif/osif_freertos.o
+ .text.OSIF_SemaPost
+                0x00000000       0x58 ./SDK/rtos/osif/osif_freertos.o
+ .text.OSIF_SemaCreate
+                0x00000000       0x14 ./SDK/rtos/osif/osif_freertos.o
+ .text.OSIF_SemaDestroy
+                0x00000000        0xc ./SDK/rtos/osif/osif_freertos.o
+ .debug_info    0x00000000      0xa9d ./SDK/rtos/osif/osif_freertos.o
+ .debug_abbrev  0x00000000      0x25a ./SDK/rtos/osif/osif_freertos.o
+ .debug_loc     0x00000000      0x516 ./SDK/rtos/osif/osif_freertos.o
+ .debug_aranges
+                0x00000000       0x68 ./SDK/rtos/osif/osif_freertos.o
+ .debug_ranges  0x00000000       0x88 ./SDK/rtos/osif/osif_freertos.o
+ .debug_line    0x00000000      0x421 ./SDK/rtos/osif/osif_freertos.o
+ .debug_str     0x00000000      0xdf1 ./SDK/rtos/osif/osif_freertos.o
+ .comment       0x00000000       0xa1 ./SDK/rtos/osif/osif_freertos.o
+ .debug_frame   0x00000000      0x134 ./SDK/rtos/osif/osif_freertos.o
+ .ARM.attributes
+                0x00000000       0x39 ./SDK/rtos/osif/osif_freertos.o
  .text          0x00000000        0x0 ./Sources/HardwareLib/FlashWriteRead.o
  .data          0x00000000        0x0 ./Sources/HardwareLib/FlashWriteRead.o
  .bss           0x00000000        0x0 ./Sources/HardwareLib/FlashWriteRead.o
@@ -802,6 +843,25 @@ Discarded input sections
  .text          0x00000000        0x0 ./Sources/main.o
  .data          0x00000000        0x0 ./Sources/main.o
  .bss           0x00000000        0x0 ./Sources/main.o
+ .text          0x00000000       0x30 e:/nxp/s32ds_arm_v2.2/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_aeabi_uldivmod.o)
+ .data          0x00000000        0x0 e:/nxp/s32ds_arm_v2.2/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_aeabi_uldivmod.o)
+ .bss           0x00000000        0x0 e:/nxp/s32ds_arm_v2.2/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x00000000       0x2c e:/nxp/s32ds_arm_v2.2/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_aeabi_uldivmod.o)
+ .ARM.attributes
+                0x00000000       0x22 e:/nxp/s32ds_arm_v2.2/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_aeabi_uldivmod.o)
+ .text          0x00000000      0x2e4 e:/nxp/s32ds_arm_v2.2/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_udivmoddi4.o)
+ .data          0x00000000        0x0 e:/nxp/s32ds_arm_v2.2/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_udivmoddi4.o)
+ .bss           0x00000000        0x0 e:/nxp/s32ds_arm_v2.2/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_udivmoddi4.o)
+ .ARM.extab     0x00000000        0x0 e:/nxp/s32ds_arm_v2.2/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_udivmoddi4.o)
+ .ARM.exidx     0x00000000        0x8 e:/nxp/s32ds_arm_v2.2/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x00000000       0x34 e:/nxp/s32ds_arm_v2.2/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_udivmoddi4.o)
+ .ARM.attributes
+                0x00000000       0x34 e:/nxp/s32ds_arm_v2.2/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_udivmoddi4.o)
+ .text          0x00000000        0x4 e:/nxp/s32ds_arm_v2.2/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_dvmd_tls.o)
+ .data          0x00000000        0x0 e:/nxp/s32ds_arm_v2.2/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_dvmd_tls.o)
+ .bss           0x00000000        0x0 e:/nxp/s32ds_arm_v2.2/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x00000000       0x22 e:/nxp/s32ds_arm_v2.2/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_dvmd_tls.o)
  .text          0x00000000        0x0 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-exit.o)
  .data          0x00000000        0x0 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-exit.o)
  .bss           0x00000000        0x0 E:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-exit.o)
@@ -920,7 +980,7 @@ Memory Configuration
 Name             Origin             Length             Attributes
 m_interrupts     0x00009000         0x00000400         xr
 m_flash_config   0x00009400         0x00000010         xr
-m_text           0x00009410         0x0003fbf0         xr
+m_text           0x00009410         0x0003b3f0         xr
 m_data           0x1fff8000         0x00008000         rw
 m_data_2         0x20000000         0x00007000         rw
 *default*        0x00000000         0xffffffff
@@ -955,6 +1015,7 @@ LOAD ./SDK/rtos/FreeRTOS_S32K/Source/tasks.o
 LOAD ./SDK/rtos/FreeRTOS_S32K/Source/timers.o
 LOAD ./SDK/rtos/FreeRTOS_S32K/Source/portable/GCC/ARM_CM4F/port.o
 LOAD ./SDK/rtos/FreeRTOS_S32K/Source/portable/MemMang/heap_4.o
+LOAD ./SDK/rtos/osif/osif_freertos.o
 LOAD ./Sources/HardwareLib/FlashWriteRead.o
 LOAD ./Sources/HardwareLib/GPIO_init.o
 LOAD ./Sources/HardwareLib/LPTMR.o
@@ -1925,9 +1986,9 @@ LOAD e:/nxp/s32ds_arm_v2.2/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../
  .bss.start_task_handler
                 0x200027fc        0x4 ./Sources/RTOS_Task.o
                 0x200027fc                start_task_handler
- .bss.timer.9137
+ .bss.timer.9162
                 0x20002800        0x4 ./Sources/RTOS_Task.o
- .bss.timer.9141
+ .bss.timer.9166
                 0x20002804        0x4 ./Sources/RTOS_Task.o
  .bss.timer1_handle
                 0x20002808        0x4 ./Sources/RTOS_Task.o

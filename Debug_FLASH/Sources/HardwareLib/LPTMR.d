@@ -34,6 +34,7 @@ Sources/HardwareLib/LPTMR.o: ../Sources/HardwareLib/LPTMR.c \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/platform/drivers/inc/flash_driver.h \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/platform/drivers/inc/power_manager.h \
  d:\dengtongbei\workspaces32ds.arm.2.2\app_rtos\sdk\platform\drivers\src\power\s32k1xx\power_manager_s32k1xx.h \
+ D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/osif/osif.h \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/platform/devices/S32K144/startup/system_S32K144.h \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/Generated_Code/pin_mux.h \
  D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/platform/drivers/inc/pins_driver.h \
@@ -118,6 +119,8 @@ D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/platform/drivers/inc/flash_dr
 D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/platform/drivers/inc/power_manager.h:
 
 d:\dengtongbei\workspaces32ds.arm.2.2\app_rtos\sdk\platform\drivers\src\power\s32k1xx\power_manager_s32k1xx.h:
+
+D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/rtos/osif/osif.h:
 
 D:/dengtongbei/workspaceS32DS.ARM.2.2/APP_RTOS/SDK/platform/devices/S32K144/startup/system_S32K144.h:
 
